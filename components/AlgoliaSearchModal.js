@@ -109,7 +109,7 @@ export default function AlgoliaSearchModal({ cRef }) {
 
                 <div className='flex justify-between items-center'>
                     <div className='text-2xl text-blue-600 font-bold'>搜索</div>
-                    <div><i class="text-gray-600 fa-solid fa-xmark p-1 cursor-pointer hover:text-blue-600" onClick={closeModal} ></i></div>
+                    <div><i className="text-gray-600 fa-solid fa-xmark p-1 cursor-pointer hover:text-blue-600" onClick={closeModal} ></i></div>
                 </div>
 
                 <input type="text" placeholder="在这里输入搜索关键词..." onChange={(e) => handleInputChange(e)}
@@ -156,8 +156,8 @@ function TagGroups(props) {
                   return <Link passHref
                         key={index}
                         href={`/tag/${encodeURIComponent(tag.name)}`}
-                        className={'cursor-pointer inline-block  whitespace-nowrap'}>
-                        <div className={' flex items-center hover:bg-blue-600 dark:hover:bg-yellow-600 hover:scale-110 hover:text-white rounded-lg px-2 py-0.5 duration-150 transition-all'}>
+                        className={'cursor-pointer inline-block whitespace-nowrap'}>
+                        <div className={' flex items-center text-black dark:text-gray-300 hover:bg-blue-600 dark:hover:bg-yellow-600 hover:scale-110 hover:text-white rounded-lg px-2 py-0.5 duration-150 transition-all'}>
                             <div className='text-lg'>{tag.name} </div>{tag.count ? <sup className='relative ml-1'>{tag.count}</sup> : <></>}
                         </div>
 
