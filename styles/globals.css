@@ -100,10 +100,6 @@ nav {
   width: 0 !important;
 }
 
-.notion-collection {
-  @apply max-w-0;
-}
-
 .glassmorphism {
   background: hsla(0, 0%, 100%, 0.05);
   -webkit-backdrop-filter: blur(10px);
@@ -157,77 +153,6 @@ nav {
   height: 1.25em;
   margin: -0.125em 0.25em;
 }
-
-/* waline评论插件夜间适配 */
-.wl-panel{
-  @apply dark:bg-black dark:border-gray-800
-}
-
-.wl-input,.wl-editor{
-  @apply dark:focus-within:bg-gray-900 dark:text-gray-200
-}
-
-.wl-meta > span {
-  @apply dark:bg-gray-800 !important
-}
-
-
-.nobelium{
-    @apply flex flex-col justify-between
-}
-
-.nobelium .notion-code{
-    @apply max-w-2xl;
-} 
-/* 滚动条样式 */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: rgba(73, 177, 245, 0.2);
-  border-radius: 2em;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--theme-color);
-  background-image: -webkit-linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.4) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0.4) 75%,
-    transparent 75%,
-    transparent
-  );
-  border-radius: 2em;
-}
-
-::-webkit-scrollbar-corner {
-  background-color: transparent;
-}
-
-::-moz-selection {
-  color: #fff;
-  background-color: var(--theme-color)!important;
-}
-
-.next #announcement-content *{
- font-size:13px !important;
- line-height:1.7 !important;
-}
-/*设置鼠标样式*/
-body {
-    cursor: url(https://www.dreamwings.cn/wp-content/themes/kotha/images/1.cur),
-        default;
-}
-a,img {
-    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
-        default;
-}
-
 
 /* twikoo 评论区超链接样式 */
 .tk-main a {
