@@ -1,4 +1,4 @@
-/* 静态文件导入 自定义样式*/
+/* 公告图标改为红色*/
 .mr-2.fas.fa-bullhorn{
     color: #f00;
 }
@@ -220,8 +220,4 @@ a,img {
   100% {
     background-position: 0% 50%;
   }
-}
-.loading-img {
-  background: url(https://npm.elemecdn.com/anzhiyu-blog@2.1.1/img/avatar.webp) no-repeat center center;
-  background-size: cover;
 }
