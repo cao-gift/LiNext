@@ -157,7 +157,7 @@ a,img {
   color: #fff;
   background-color: rgb(59 130 246);
 }
-/*加载动态条*/
+/*添加顶部加载进度条*/
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -182,7 +182,6 @@ a,img {
   opacity: 0;
   transition: 0.3s ease-in;
 }
-
 .pace .pace-progress {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -206,7 +205,6 @@ a,img {
   animation: gradient 1.5s ease infinite;
   background-size: 200%;
 }
-
 .pace.pace-inactive {
   opacity: 0;
   transition: 0.3s;
@@ -222,4 +220,8 @@ a,img {
   100% {
     background-position: 0% 50%;
   }
+}
+.loading-img {
+  background: url(https://npm.elemecdn.com/anzhiyu-blog@2.1.1/img/avatar.webp) no-repeat center center;
+  background-size: cover;
 }
