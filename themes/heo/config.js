@@ -12,8 +12,8 @@ const CONFIG = {
   // 英雄区(首页顶部大卡)
   HERO_TITLE_1: '分享科技',
   HERO_TITLE_2: '与思维认知',
-  HERO_TITLE_3: '88LIN.EU.COM',
-  HERO_TITLE_4: '新版上线',
+  HERO_TITLE_3: '',
+  HERO_TITLE_4: '',
   HERO_TITLE_5: '生活明朗 万物可爱',
   HERO_TITLE_LINK: 'https://88lin.eu.org',
 
@@ -28,7 +28,7 @@ const CONFIG = {
 
   // 右侧个人资料卡牌欢迎语，点击可自动切换
   INFOCARD_GREETINGS: [
-    '你好！我是',
+    '睡个好觉，保证精力充沛',
     '🔍 分享与热心帮助',
     '🤝 专修交互与设计',
     '🏃 脚踏实地行动派',
@@ -100,8 +100,8 @@ const CONFIG = {
 
   SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
   SOCIAL_CARD_TITLE_1: '交流频道',
-  SOCIAL_CARD_TITLE_2: '加入我们的社群讨论分享',
-  SOCIAL_CARD_TITLE_3: '点击加入社群',
+  SOCIAL_CARD_TITLE_2: '加入我们的Q群讨论分享',
+  SOCIAL_CARD_TITLE_3: '点击加入Q群',
   SOCIAL_CARD_URL: 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=K7UM_n_ePWUiy4M3wioIcsH0LQQxN_3A&authKey=uW6%2BSKmMeN4%2FO%2FboJ1hS54nJsGaPEuWsq8gxEwYVY0sm1wB18tX9yPi0t5GagiaN&noverify=0&group_code=826833331',
 
   // *****  以下配置无效，只是预留开发 ****
