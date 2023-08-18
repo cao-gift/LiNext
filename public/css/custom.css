@@ -152,11 +152,6 @@ a,img {
 ::-webkit-scrollbar-corner {
   background-color: transparent;
 }
-
-::-moz-selection {
-  color: #fff;
-  background-color: rgb(59 130 246);
-}
 /*添加顶部加载进度条*/
 .pace {
   -webkit-pointer-events: none;
