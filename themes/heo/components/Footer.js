@@ -1,7 +1,6 @@
 import React from 'react'
 import BLOG from '@/blog.config'
 import SocialButton from './SocialButton'
-import { AdSlot } from '@/components/GoogleAdsense'
 // import DarkModeButton from '@/components/DarkModeButton'
 
 const Footer = ({ title }) => {
@@ -29,7 +28,6 @@ const Footer = ({ title }) => {
                 <SocialButton />
             </div>
 
-            <AdSlot type='native'/>
             <br />
             {/* 底部页面信息 */}
             <div id='footer-bottom' className='w-full h-20 flex flex-col p-3 lg:flex-row justify-between px-6 items-center bg-[#f1f3f7] dark:bg-[#30343f]'>
