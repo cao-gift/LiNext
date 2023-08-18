@@ -16,17 +16,6 @@ const Style = () => {
         color: white;
     }
 
-    ::-webkit-scrollbar-thumb {
-        background: rgba(60, 60, 67, 0.4);
-        border-radius: 8px;
-        cursor: pointer;
-    }
-
-    ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-    }
-
     .today-card-cover {
         -webkit-mask-image: linear-gradient(to top, transparent 5%, black 70%);
         mask-image: linear-gradient(to top, transparent 5%, black 70%);      
