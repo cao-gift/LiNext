@@ -52,10 +52,9 @@ const BLOG = {
     // '"LXGW WenKai"',
     '"PingFang SC"',
     '-apple-system',
-    'HarmonyOS_Regular',
     'BlinkMacSystemFont',
     '"Hiragino Sans GB"',
-    '"Microsoft YaHei"',
+    'HarmonyOS_Regular',
     '"Segoe UI Emoji"',
     '"Segoe UI Symbol"',
     '"Segoe UI"',
@@ -65,7 +64,8 @@ const BLOG = {
     '"Source Han Sans SC"',
     'Arial',
     'sans-serif',
-    '"Apple Color Emoji"'
+    '"Apple Color Emoji"',
+    '"Microsoft YaHei"'
   ],
   // 衬线字体 例如'"LXGW WenKai"'
   FONT_SERIF: [
