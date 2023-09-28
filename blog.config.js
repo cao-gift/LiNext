@@ -53,18 +53,18 @@ const BLOG = {
     '-apple-system',
     'BlinkMacSystemFont',
     '"Hiragino Sans GB"',
-    'HarmonyOS_Regular',
+    '"Microsoft YaHei"',
     '"Segoe UI Emoji"',
     '"Segoe UI Symbol"',
     '"Segoe UI"',
     '"Noto Sans SC"',
+    'HarmonyOS_Regular',
     '"Helvetica Neue"',
     'Helvetica',
     '"Source Han Sans SC"',
     'Arial',
     'sans-serif',
-    '"Apple Color Emoji"',
-    '"Microsoft YaHei"'
+    '"Apple Color Emoji"'
   ],
   // 衬线字体 例如'"LXGW WenKai"'
   FONT_SERIF: [
