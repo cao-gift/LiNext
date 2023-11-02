@@ -154,7 +154,7 @@ const BLOG = {
   PREVIEW_CATEGORY_COUNT: 0, // 首页最多展示的分类数量，0为不限制
   PREVIEW_TAG_COUNT: 0, // 首页最多展示的标签数量，0为不限制
 
-  POST_DISABLE_GALLERY_CLICK: process.env.NEXT_PUBLIC_POST_DISABLE_GALLERY_CLICK || true, // 画册视图禁止点击，方便在友链页面的画册插入链接
+  POST_DISABLE_GALLERY_CLICK: process.env.NEXT_PUBLIC_POST_DISABLE_GALLERY_CLICK || false, // 画册视图禁止点击，方便在友链页面的画册插入链接
 
   //   ********动态特效相关********
   // 鼠标点击烟花特效
@@ -178,7 +178,7 @@ const BLOG = {
 
   //   ********挂件组件相关********
   // Chatbase 是否显示chatbase机器人 https://www.chatbase.co/
-  CHATBASE_ID: process.env.NEXT_PUBLIC_CHATBASE_ID || false,
+  CHATBASE_ID: process.env.NEXT_PUBLIC_CHATBASE_ID || true,
   // WebwhizAI 机器人 @see https://githubfast.com/webwhiz-ai/webwhiz
   WEB_WHIZ_ENABLED: process.env.NEXT_PUBLIC_WEB_WHIZ_ENABLED || false, // 是否显示
   WEB_WHIZ_BASE_URL: process.env.NEXT_PUBLIC_WEB_WHIZ_BASE_URL || 'https://api.webwhiz.ai', // 可以自建服务器
