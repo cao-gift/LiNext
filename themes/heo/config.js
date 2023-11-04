@@ -25,7 +25,7 @@ const CONFIG = {
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   HERO_RECOMMEND_POST_TAG: '',
   HERO_RECOMMEND_POST_SORT_BY_UPDATE_TIME: false, // 推荐文章排序，为`true`时将强制按最后修改时间倒序
-  //   HERO_RECOMMEND_COVER: 'https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_1280.jpg', // 英雄区右侧图片
+  HERO_RECOMMEND_COVER: 'https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_1280.jpg', // 英雄区右侧图片
 
   // 右侧个人资料卡牌欢迎语，点击可自动切换
   INFOCARD_GREETINGS: [
@@ -101,8 +101,8 @@ const CONFIG = {
 
   SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
   SOCIAL_CARD_TITLE_1: '交流频道',
-  SOCIAL_CARD_TITLE_2: '加入我们的Q群讨论分享',
-  SOCIAL_CARD_TITLE_3: '点击加入Q群',
+  SOCIAL_CARD_TITLE_2: '加入我们的AI交流群讨论分享',
+  SOCIAL_CARD_TITLE_3: '点击加入AI交流群',
   SOCIAL_CARD_URL: 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=K7UM_n_ePWUiy4M3wioIcsH0LQQxN_3A&authKey=uW6%2BSKmMeN4%2FO%2FboJ1hS54nJsGaPEuWsq8gxEwYVY0sm1wB18tX9yPi0t5GagiaN&noverify=0&group_code=826833331',
 
   // *****  以下配置无效，只是预留开发 ****
