@@ -6,7 +6,7 @@ const CONFIG = {
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   NOTICE_BAR: [
     { title: '欢迎来到故人博客', url: 'https://88lin.eu.org' },
-    { title: '点击使用ChatGPT', url: 'http://a.x-code.fun/' }
+    { title: '点击使用ChatGPT', url: 'https://88lin.eu.org/article/34' }
   ],
 
   // 英雄区(首页顶部大卡)
@@ -37,7 +37,7 @@ const CONFIG = {
     '🤖️ 数码科技爱好者',
     '🧱 团队小组发动机'
   ],
-  INFO_CARD_URL: 'https://githubfast.com/88lin/NotionNext', // 个人资料底部按钮链接
+  INFO_CARD_URL: 'https://githubfast.com/88lin', // 个人资料底部按钮链接
 
   // 用户技能图标
   GROUP_ICONS: [
@@ -100,10 +100,10 @@ const CONFIG = {
   ],
 
   SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
-  SOCIAL_CARD_TITLE_1: '交流频道',
-  SOCIAL_CARD_TITLE_2: '加入我们的AI交流群讨论分享',
-  SOCIAL_CARD_TITLE_3: '点击加入AI交流群',
-  SOCIAL_CARD_URL: 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=K7UM_n_ePWUiy4M3wioIcsH0LQQxN_3A&authKey=uW6%2BSKmMeN4%2FO%2FboJ1hS54nJsGaPEuWsq8gxEwYVY0sm1wB18tX9yPi0t5GagiaN&noverify=0&group_code=826833331',
+  SOCIAL_CARD_TITLE_1: '公众号',
+  SOCIAL_CARD_TITLE_2: '快人一步获取最新文章',
+  SOCIAL_CARD_TITLE_3: '扫一扫',
+  SOCIAL_CARD_URL: '',
 
   // *****  以下配置无效，只是预留开发 ****
   // 菜单配置
