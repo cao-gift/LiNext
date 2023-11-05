@@ -102,8 +102,8 @@ const CONFIG = {
   SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
   SOCIAL_CARD_TITLE_1: '公众号',
   SOCIAL_CARD_TITLE_2: '快人一步获取最新文章',
-  SOCIAL_CARD_TITLE_3: '扫一扫',
-  SOCIAL_CARD_URL: '',
+  SOCIAL_CARD_TITLE_3: '点击扫码关注公众号',
+  SOCIAL_CARD_URL: 'https://jsd.cdn.zzko.cn/gh/88lin/PicX@master/qrcode_for_gh_2433b95fc21e_430.jpg',
 
   // *****  以下配置无效，只是预留开发 ****
   // 菜单配置
