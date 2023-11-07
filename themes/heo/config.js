@@ -5,8 +5,8 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   NOTICE_BAR: [
-    { title: '欢迎来到故人博客', url: 'https://88lin.eu.org' },
-    { title: '点击使用ChatGPT', url: 'https://88lin.eu.org/article/34' }
+    { title: '欢迎来到故人博客', url: 'https://yyyy.gay' },
+    { title: '点击使用ChatGPT', url: 'https://yyyy.gay/article/34' }
   ],
 
   // 英雄区(首页顶部大卡)
@@ -15,7 +15,7 @@ const CONFIG = {
   HERO_TITLE_3: '',
   HERO_TITLE_4: '',
   HERO_TITLE_5: '生活明朗 万物可爱',
-  HERO_TITLE_LINK: 'https://88lin.eu.org',
+  HERO_TITLE_LINK: 'https://yyyy.gay',
 
   // 英雄区显示三个置顶分类
   HERO_CATEGORY_1: { title: '必看精选', url: '/tag/必看' },
