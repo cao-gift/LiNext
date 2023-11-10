@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { createRef } from 'react'
 import { init } from '@waline/client'
-import BLOG from '@/blog.config'
 import { useRouter } from 'next/router'
 import '@waline/client/dist/waline.css'
+import { siteConfig } from '@/lib/config'
+
 const path = ''
 let waline = null
 /**
@@ -11,7 +12,7 @@ let waline = null
  * @returns
  */
 const WalineComponent = (props) => {
-  const containerRef = React.createRef()
+  const containerRef = createRef()
   const router = useRouter()
 
   const updateWaline = url => {
@@ -76,8 +77,8 @@ const WalineComponent = (props) => {
         ...props,
         el: containerRef.current,
         locale,
-        serverURL: BLOG.COMMENT_WALINE_SERVER_URL,
-        lang: BLOG.lang,
+        serverURL: siteConfig('COMMENT_WALINE_SERVER_URL'),
+        lang: siteConfig('LANG'),
         reaction: true,
         dark: 'html.dark',
         emoji: [
