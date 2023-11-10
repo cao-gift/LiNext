@@ -21,7 +21,7 @@ export default function TouchMeCard() {
                     <div className='h-full'>
                         <h2 className='font-[1000] text-3xl'>公众号</h2>
                         <h3 className='pt-2'>快人一步获取最新文章</h3>
-                        <div className='absolute left-0 top-0 w-full h-full' style={{ background: 'url(https://520.txsb.gq/gzh/index.html) center center no-repeat' }}></div>
+                        <div className='absolute left-0 top-0 w-full h-full' style={{ background: 'url(https://img02.anheyu.com/adminuploads/1/2022/09/11/631ddb7c9b250.png) center center no-repeat' }}></div>
                     </div>}
                 backContent={<Link href={siteConfig('HEO_SOCIAL_CARD_URL', null, CONFIG)}>
                     <div className='font-[1000] text-xl h-full'>
