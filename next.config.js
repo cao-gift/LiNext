@@ -43,8 +43,8 @@ module.exports = withBundleAnalyzer({
       'cdn.staticaly.com',
       'gcore.jsdelivr.net',
       'p1.qhimg.com',
-      'tuchuang.voooe.cn',
-      'webmention.io'
+      'webmention.io',
+      'ko-fi.com'
     ]
   },
   // 默认将feed重定向至 /public/rss/feed.xml
@@ -95,7 +95,9 @@ module.exports = withBundleAnalyzer({
     //   })
     // }
     // 动态主题：添加 resolve.alias 配置，将动态路径映射到实际路径
-    console.log('加载默认主题', path.resolve(__dirname, 'themes', THEME))
+    if (!isServer) {
+      console.log('加载默认主题', path.resolve(__dirname, 'themes', THEME))
+    }
     config.resolve.alias['@theme-components'] = path.resolve(__dirname, 'themes', THEME)
     return config
   },
