@@ -105,9 +105,9 @@ const CONFIG = {
   ],
 
   HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
-  HEO_SOCIAL_CARD_TITLE_1: '公众号',
-  HEO_SOCIAL_CARD_TITLE_2: '快人一步获取最新文章',
-  HEO_SOCIAL_CARD_TITLE_3: '点击扫码关注公众号',
+  HEO_SOCIAL_CARD_TITLE_1: '',
+  HEO_SOCIAL_CARD_TITLE_2: '',
+  HEO_SOCIAL_CARD_TITLE_3: '',
   HEO_SOCIAL_CARD_URL: 'https://520.txsb.gq/gzh/index.html',
 
   // *****  以下配置无效，只是预留开发 ****
