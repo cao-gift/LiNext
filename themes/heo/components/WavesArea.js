@@ -11,26 +11,30 @@ export default function WavesArea() {
         <section className="main-hero-waves-area waves-area w-full absolute left-0 z-10 bottom-0">
             <svg className="waves-svg w-full h-[60px]" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
                 <defs>
+                    <linearGradient id="wave-gradient" gradientUnits="userSpaceOnUse" x1="0" y1="24" x2="150" y2="24">
+                      <stop offset="0%" stop-color="#f7f9fe" />
+                      <stop offset="100%" stop-color="#18171d" />
+                    </linearGradient>
                     <path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path>
                 </defs>
                 <g className="parallax">
-                    <use href="#gentle-wave" x="48" y="0"></use>
-                    <use href="#gentle-wave" x="48" y="3"></use>
-                    <use href="#gentle-wave" x="48" y="5"></use>
-                    <use href="#gentle-wave" x="48" y="7"></use>
+                    <use href="#gentle-wave" x="48" y="0"> fill="url(#wave-gradient)"</use>
+                    <use href="#gentle-wave" x="48" y="3"> fill="url(#wave-gradient)"</use>
+                    <use href="#gentle-wave" x="48" y="5"> fill="url(#wave-gradient)"</use>
+                    <use href="#gentle-wave" x="48" y="7"> fill="url(#wave-gradient)"</use>
                 </g>
             </svg>
             <style jsx global>{`
                 /* Animation */
 
                 .parallax > use {
-                  animation: move-forever 30s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+                  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
                 }
                 .parallax > use:nth-child(1) {
                   animation-delay: -2s;
-                  animation-duration: 7s;
+                  animation-duration: 8s;
                   fill: ${color};
-                  opacity: 0.5;
+                  opacity: 0.7;
                 }
                 .parallax > use:nth-child(2) {
                   animation-delay: -3s;
