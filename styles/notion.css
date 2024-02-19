@@ -402,6 +402,52 @@ summary > .notion-h {
   word-break: break-word;
 }
 
+.notion-h .notion-h-title::before {
+  position: absolute;
+  margin-left:0.625rem;
+  color: var(--grey-4); /* 文本颜色 */
+  content: 'H'; /* 默认内容 */
+  font-family: Mulish,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  left: -2.625rem;
+  width: 1.25rem;
+  height: 1.5625rem;
+  bottom: 0.5rem;
+  text-align: right;
+  visibility: visible;
+  font-size: 80%;
+  font-weight:lighter;
+}
+
+.notion-h .notion-h-title::after{
+    position: absolute;
+    font-size: 55%;
+    left: -0.75rem;
+    bottom: 0.5rem;
+    line-height: 1;
+    color:var(--grey-4);
+    font-weight:lighter;
+}
+
+.notion-toggle .notion-h .notion-h-title::before,
+.notion-toggle .notion-h .notion-h-title::after {
+  content: none !important;
+}
+
+.notion-h1 .notion-h-title::after { content: '1'; }
+.notion-h2 .notion-h-title::after { content: '2'; }
+.notion-h3 .notion-h-title::after { content: '3'; }
+
+.notion-h1::after {
+  content: "";
+  display: block;
+  box-sizing: unset;
+  width: 100%;
+  height: .0625rem;
+  background: var(--grey-3);
+  padding-right: 1.625rem;
+  margin-left: -1.625rem;
+}
+
 .notion-h1 {
   font-size: 1.575em;
   margin-top: 1.08em;
@@ -413,6 +459,15 @@ summary > .notion-h {
 .notion-h3 {
   @apply w-full
 }
+
+.notion-h1:hover .notion-h-title::before,.notion-h2:hover .notion-h-title::before,.notion-h3:hover .notion-h-title::before,
+.notion-h1:hover .notion-h-title::after,.notion-h2:hover .notion-h-title::after,.notion-h3:hover .notion-h-title::after{
+  color:var(--color-pink)
+}
+
+/* .notion-h1:hover::after,.notion-h2:hover::after,.notion-h3:hover::after{
+  color:var(--select-color-0);
+} */
 
 .notion-header-anchor {
   position: absolute;
@@ -442,8 +497,7 @@ summary > .notion-h {
 }
 
 .notion-h:hover .notion-hash-link {
-  opacity: 1;
-  @apply dark:fill-gray-200
+  fill: var(--color-pink)
 }
 
 .notion-hash-link {
@@ -452,7 +506,7 @@ summary > .notion-h {
   float: left;
   margin-left: -20px;
   padding-right: 4px;
-  fill: var(--fg-color-icon);
+  fill: var(--grey-4);
 }
 
 .notion-page-cover {
