@@ -414,6 +414,14 @@ summary > .notion-h {
   @apply w-full
 }
 
+.notion-h1:hover .notion-h-title::before,.notion-h2:hover .notion-h-title::before,.notion-h3:hover .notion-h-title::before,
+.notion-h1:hover .notion-h-title::after,.notion-h2:hover .notion-h-title::after,.notion-h3:hover .notion-h-title::after{
+ color:var(--select-color-0)
+ background-color: #ff69b4;
+ box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.2);
+ outline: 0.1rem solid #ff9f43;
+}
+
 .notion-header-anchor {
   position: absolute;
   top: -54px;
