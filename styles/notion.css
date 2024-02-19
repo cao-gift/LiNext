@@ -447,6 +447,7 @@ summary > .notion-h {
   margin-left: -1.625rem;
 }
 
+.notion-h .notion-h-title::before {
 .notion-h1 {
   font-size: 1.575em;
   margin-top: 1.08em;
@@ -458,6 +459,7 @@ summary > .notion-h {
 .notion-h3 {
   @apply w-full
 }
+  
 .notion-h1:hover .notion-h-title::before,.notion-h2:hover .notion-h-title::before,.notion-h3:hover .notion-h-title::before,
 .notion-h1:hover .notion-h-title::after,.notion-h2:hover .notion-h-title::after,.notion-h3:hover .notion-h-title::after{
   color:var(--color-pink)
@@ -501,7 +503,7 @@ summary > .notion-h {
   float: left;
   margin-left: -20px;
   padding-right: 4px;
-  fill: var(--fg-color-icon);
+  fill: var(--grey-4);
 }
 
 .notion-page-cover {
