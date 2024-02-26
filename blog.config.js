@@ -10,7 +10,7 @@ const BLOG = {
   LANG: process.env.NEXT_PUBLIC_LANG || 'zh-CN', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
   SINCE: process.env.NEXT_SINCE || 2021, // e.g if leave this empty, current year will be used.
   APPEARANCE: process.env.NEXT_PUBLIC_APPEARANCE || 'auto', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
-  APPEARANCE_DARK_TIME: process.env.NEXT_PUBLIC_APPEARANCE_DARK_TIME || [23, 7], // 夜间模式起至时间，false时关闭根据时间自动切换夜间模式
+  APPEARANCE_DARK_TIME: process.env.NEXT_PUBLIC_APPEARANCE_DARK_TIME || [23, 8], // 夜间模式起至时间，false时关闭根据时间自动切换夜间模式
 
   // 3.14.1版本后，欢迎语在此配置，英文逗号隔开 ,  即可支持多个欢迎语打字效果。
   GREETING_WORDS: process.env.NEXT_PUBLIC_GREETING_WORDS || 'Hi，我是一个大学牲, Hi，我是一个打工人,Hi，我是一个干饭人,欢迎来到我的博客🎉',
@@ -19,7 +19,7 @@ const BLOG = {
 
   AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || '故人', // 您的昵称 例如 tangly1024
   BIO: process.env.NEXT_PUBLIC_BIO || '我与春风皆过客，你携秋水揽星河。', // 作者简介
-  LINK: process.env.NEXT_PUBLIC_LINK || 'https://88lin.eu.org', // 网站地址
+  LINK: process.env.NEXT_PUBLIC_LINK || 'https://yyyy.gay', // 网站地址
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion,88lin,故人,博客,Blog', // 网站关键词 英文逗号隔开
 
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
@@ -47,17 +47,17 @@ const BLOG = {
   // START ************网站字体*****************
   // ['font-serif','font-sans'] 两种可选，分别是衬线和无衬线: 参考 https://www.jianshu.com/p/55e410bd2115
   // 后面空格隔开的font-light的字体粗细，留空是默认粗细；参考 https://www.tailwindcss.cn/docs/font-weight
-  FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans font-light',
+  FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans font-semibold',
   // 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
   FONT_URL: [
-    //'https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css',
+    'https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css',
     'https://fonts.googleapis.com/css?family=Bitter&display=swap', // Bitter 用作英文数字的字体
     'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
     'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
   ],
   // 无衬线字体 例如'"LXGW WenKai"'
   FONT_SANS: [
-    //'"LXGW WenKai"',
+    '"LXGW WenKai"',
     '"PingFang SC"',
     '-apple-system',
     'BlinkMacSystemFont',
@@ -77,7 +77,7 @@ const BLOG = {
   ],
   // 衬线字体 例如'"LXGW WenKai"'
   FONT_SERIF: [
-    '"LXGW WenKai"',
+    // '"LXGW WenKai"',
     'Bitter',
     '"Noto Serif SC"',
     'SimSun',
@@ -175,10 +175,8 @@ const BLOG = {
   POST_LIST_PREVIEW: process.env.NEXT_PUBLIC_POST_PREVIEW || 'false', //  是否在列表加载文章预览
   POST_PREVIEW_LINES: 16, // 预览博客行数
   POST_RECOMMEND_COUNT: 6, // 推荐文章数量
-  POSTS_PER_PAGE: 12, // post counts per page
-  POSTS_SORT_BY: process.env.NEXT_PUBLIC_POST_SORT_BY || 'notion', // 排序方式 'date'按时间,'notion'由notion控制
-
-  POST_WAITING_TIME_FOR_404: process.env.NEXT_PUBLIC_POST_WAITING_TIME_FOR_404 || '8', // 文章加载超时时间，单位秒；超时后跳转到404页面
+  POSTS_PER_PAGE: 16, // post counts per page
+  POSTS_SORT_BY: process.env.NEXT_PUBLIC_POST_SORT_BY || 'date', // 排序方式 'date'按时间,'notion'由notion控制
 
   ALGOLIA_APP_ID: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || null, // 在这里查看 https://dashboard.algolia.com/account/api-keys/
   ALGOLIA_ADMIN_APP_KEY: process.env.ALGOLIA_ADMIN_APP_KEY || null, // 管理后台的KEY，不要暴露在代码中，在这里查看 https://dashboard.algolia.com/account/api-keys/
@@ -189,17 +187,19 @@ const BLOG = {
   PREVIEW_CATEGORY_COUNT: 0, // 首页最多展示的分类数量，0为不限制
   PREVIEW_TAG_COUNT: 0, // 首页最多展示的标签数量，0为不限制
 
-  POST_DISABLE_GALLERY_CLICK: process.env.NEXT_PUBLIC_POST_DISABLE_GALLERY_CLICK || false, // 画册视图禁止点击，方便在友链页面的画册插入链接
+  POST_DISABLE_GALLERY_CLICK: process.env.NEXT_PUBLIC_POST_DISABLE_GALLERY_CLICK || true, // 画册视图禁止点击，方便在友链页面的画册插入链接
 
   //   ********动态特效相关********
   // 鼠标点击烟花特效
-  FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || false, // 开关
+  FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || true, // 开关
+  // 烟花色彩
   FIREWORKS_COLOR: [
-    '255, 20, 97',
-    '24, 255, 146',
-    '90, 135, 255',
-    '251, 243, 140'
+    '255,182,185',
+    '250,227,217',
+    '187,222,214',
+    '138,198,209'
   ],
+  
   // 樱花飘落特效
   SAKURA: process.env.NEXT_PUBLIC_SAKURA || true, // 开关
   // 漂浮线段特效
@@ -231,7 +231,7 @@ const BLOG = {
   WIDGET_PET_LINK:
         process.env.NEXT_PUBLIC_WIDGET_PET_LINK ||
         'https://cdn.jsdelivr.net/npm/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json', // 挂件模型地址 @see https://githubfast.com/xiazeyu/live2d-widget-models
-  WIDGET_PET_SWITCH_THEME: process.env.NEXT_PUBLIC_WIDGET_PET_SWITCH_THEME || false, // 点击宠物挂件切换博客主题
+  WIDGET_PET_SWITCH_THEME: process.env.NEXT_PUBLIC_WIDGET_PET_SWITCH_THEME || true, // 点击宠物挂件切换博客主题
 
   // 音乐播放插件
   MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || false, // 是否使用音乐播放插件
@@ -337,7 +337,7 @@ const BLOG = {
         process.env.NEXT_PUBLIC_VALINE_PLACEHOLDER || '抢个沙发吧~', // 可以搭配后台管理评论 https://githubfast.com/DesertsP/Valine-Admin  便于查看评论，以及邮件通知，垃圾评论过滤等功能
 
   COMMENT_WALINE_SERVER_URL: process.env.NEXT_PUBLIC_WALINE_SERVER_URL || 'https://pl.accn.link/', // 请配置完整的Waline评论地址 例如 hhttps://preview-waline.tangly1024.com @see https://waline.js.org/guide/get-started.html
-  COMMENT_WALINE_RECENT: process.env.NEXT_PUBLIC_WALINE_RECENT || false, // 最新评论
+  COMMENT_WALINE_RECENT: process.env.NEXT_PUBLIC_WALINE_RECENT || true, // 最新评论
 
   // 此评论系统基于WebMention，细节可参考https://webmention.io
   // 它是一个基于IndieWeb理念的开放式评论系统，下方COMMENT_WEBMENTION包含的属性皆需配置：
@@ -438,7 +438,7 @@ const BLOG = {
         process.env.NEXT_PUBLIC_DESCRIPTION || '这是一个由NotionNext生成的站点', // 站点描述，被notion中的页面描述覆盖
 
   // 网站图片
-  IMG_LAZY_LOAD_PLACEHOLDER: process.env.NEXT_PUBLIC_IMG_LAZY_LOAD_PLACEHOLDER || 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==', // 懒加载占位图片地址，支持base64或url
+  IMG_LAZY_LOAD_PLACEHOLDER: process.env.NEXT_PUBLIC_IMG_LAZY_LOAD_PLACEHOLDER || 'data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ibGRzLWJsdWVjYXQiIHdpZHRoPSI4MHB4IiAgaGVpZ2h0PSI4MHB4IiAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiPg0KICAgICAgPGcgdHJhbnNmb3JtPSJyb3RhdGUoMC45NzQ2NCA1MCA1MCkiPg0KICAgICAgICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InJvdGF0ZSIgdmFsdWVzPSIzNjAgNTAgNTA7MCA1MCA1MCIga2V5VGltZXM9IjA7MSIgZHVyPSIxLjVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgY2FsY01vZGU9InNwbGluZSIga2V5U3BsaW5lcz0iMC41IDAgMC41IDEiIGJlZ2luPSItMC4xNTAwMDAwMDAwMDAwMDAwMnMiPjwvYW5pbWF0ZVRyYW5zZm9ybT4NCiAgICAgICAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iMzkuODkxIiBzdHJva2U9IiM2OTk0YjciIHN0cm9rZS13aWR0aD0iMTQuNCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWRhc2hhcnJheT0iMCAzMDAiPg0KICAgICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNoYXJyYXkiIHZhbHVlcz0iMTUgMzAwOzU1LjE0MTM1OTkxOTUxNDIgMzAwOzE1IDMwMCIga2V5VGltZXM9IjA7MC41OzEiIGR1cj0iMS41cyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIGNhbGNNb2RlPSJsaW5lYXIiIGtleVNwbGluZXM9IjAgMC40IDAuNiAxOzAuNCAwIDEgMC42IiBiZWdpbj0iLTAuMDY5cyI+PC9hbmltYXRlPg0KICAgICAgICA8L2NpcmNsZT4NCiAgICAgICAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iMzkuODkxIiBzdHJva2U9IiNlZWVlZWUiIHN0cm9rZS13aWR0aD0iNy4yIiBmaWxsPSJub25lIiBzdHJva2UtZGFzaGFycmF5PSIwIDMwMCI+DQogICAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ic3Ryb2tlLWRhc2hhcnJheSIgdmFsdWVzPSIxNSAzMDA7NTUuMTQxMzU5OTE5NTE0MiAzMDA7MTUgMzAwIiBrZXlUaW1lcz0iMDswLjU7MSIgZHVyPSIxLjVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgY2FsY01vZGU9ImxpbmVhciIga2V5U3BsaW5lcz0iMCAwLjQgMC42IDE7MC40IDAgMSAwLjYiIGJlZ2luPSItMC4wNjlzIj48L2FuaW1hdGU+DQogICAgICAgIDwvY2lyY2xlPg0KICAgICAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIzMi43NzEiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBzdHJva2UtZGFzaGFycmF5PSIwIDMwMCI+DQogICAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ic3Ryb2tlLWRhc2hhcnJheSIgdmFsdWVzPSIxNSAzMDA7NDUuMjk5Mzc4NDU0MzQ4MDk0IDMwMDsxNSAzMDAiIGtleVRpbWVzPSIwOzAuNTsxIiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBjYWxjTW9kZT0ibGluZWFyIiBrZXlTcGxpbmVzPSIwIDAuNCAwLjYgMTswLjQgMCAxIDAuNiIgYmVnaW49Ii0wLjA2OXMiPjwvYW5pbWF0ZT4NCiAgICAgICAgPC9jaXJjbGU+DQogICAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQ3LjE3MSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIHN0cm9rZS1kYXNoYXJyYXk9IjAgMzAwIj4NCiAgICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJzdHJva2UtZGFzaGFycmF5IiB2YWx1ZXM9IjE1IDMwMDs2Ni4wMzM4ODk5NjgwNDA3MyAzMDA7MTUgMzAwIiBrZXlUaW1lcz0iMDswLjU7MSIgZHVyPSIxLjVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgY2FsY01vZGU9ImxpbmVhciIga2V5U3BsaW5lcz0iMCAwLjQgMC42IDE7MC40IDAgMSAwLjYiIGJlZ2luPSItMC4wNjlzIj48L2FuaW1hdGU+DQogICAgICAgIDwvY2lyY2xlPg0KICAgICAgPC9nPg0KDQogICAgICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSgxMS4xODIyIDUwIDUwKSI+DQogICAgICAgIDxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiB2YWx1ZXM9IjM2MCA1MCA1MDswIDUwIDUwIiBrZXlUaW1lcz0iMDsxIiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBjYWxjTW9kZT0ic3BsaW5lIiBrZXlTcGxpbmVzPSIwLjUgMCAwLjUgMSI+PC9hbmltYXRlVHJhbnNmb3JtPg0KCTxwYXRoIGZpbGw9IiM2OTk0YjciIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTk3LjIsNTAuMWMwLDYuMS0xLjIsMTIuMi0zLjUsMTcuOWwtMTMuMy01LjRjMS42LTMuOSwyLjQtOC4yLDIuNC0xMi40Ij48L3BhdGg+DQoJPHBhdGggZmlsbD0iI2VlZWVlZSIgZD0iTTkzLjUsNDkuOWMwLDEuMiwwLDIuNy0wLjEsMy45bC0wLjQsMy42Yy0wLjQsMi0yLjMsMy4zLTQuMSwyLjhsLTAuMi0wLjFjLTEuOC0wLjUtMy4xLTIuMy0yLjctMy45bDAuNC0zIGMwLjEtMSwwLjEtMi4zLDAuMS0zLjMiPjwvcGF0aD4NCgk8cGF0aCBmaWxsPSIjNjk5NGI3IiBzdHJva2U9IiMwMDAwMDAiIGQ9Ik04NS40LDYyLjdjLTAuMiwwLjctMC41LDEuNC0wLjgsMi4xYy0wLjMsMC43LTAuNiwxLjQtMC45LDJjLTAuNiwxLjEtMiwxLjQtMy4yLDAuOGMtMS4xLTAuNy0xLjctMi0xLjItMi45IGMwLjMtMC42LDAuNS0xLjIsMC44LTEuOGMwLjItMC42LDAuNi0xLjIsMC43LTEuOCI+PC9wYXRoPg0KCTxwYXRoIGZpbGw9IiM2OTk0YjciIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTk0LjUsNjUuOGMtMC4zLDAuOS0wLjcsMS43LTEsMi42Yy0wLjQsMC45LTAuNywxLjctMS4xLDIuNWMtMC43LDEuNC0yLjMsMS45LTMuNCwxLjNoMCBjLTEuMS0wLjctMS41LTIuMi0wLjktMy40YzAuNC0wLjgsMC43LTEuNSwxLTIuM2MwLjMtMC44LDAuNy0xLjUsMC45LTIuMyI+PC9wYXRoPg0KICAgICAgPC9nPg0KICAgICAgPGcgdHJhbnNmb3JtPSJyb3RhdGUoMC45NzQ2NCA1MCA1MCkiPg0KICAgICAgICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InJvdGF0ZSIgdmFsdWVzPSIzNjAgNTAgNTA7MCA1MCA1MCIga2V5VGltZXM9IjA7MSIgZHVyPSIxLjVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgY2FsY01vZGU9InNwbGluZSIga2V5U3BsaW5lcz0iMC41IDAgMC41IDEiIGJlZ2luPSItMC4xNTAwMDAwMDAwMDAwMDAwMnMiPjwvYW5pbWF0ZVRyYW5zZm9ybT4NCiAgICAgICAgPHBhdGggZmlsbD0iI2VlZWVlZSIgc3Ryb2tlPSIjMDAwMDAwIiBkPSJNODYuOSwzNS4zbC02LDIuNGMtMC40LTEuMi0xLjEtMi40LTEuNy0zLjVjLTAuMi0wLjUsMC4zLTEuMSwwLjktMUM4Mi4zLDMzLjgsODQuOCwzNC40LDg2LjksMzUuM3oiPjwvcGF0aD4NCiAgICAgICAgPHBhdGggZmlsbD0iI2VlZWVlZSIgc3Ryb2tlPSIjMDAwMDAwIiBkPSJNODcuMSwzNS4zbDYtMi40Yy0wLjYtMS43LTEuNS0zLjMtMi4zLTQuOWMtMC4zLTAuNy0xLjItMC42LTEuNCwwLjFDODguOCwzMC42LDg4LjIsMzMsODcuMSwzNS4zeiI+PC9wYXRoPg0KICAgICAgICA8cGF0aCBmaWxsPSIjNjk5NGI3IiBzdHJva2U9IiMwMDAwMDAiIGQ9Ik04Mi44LDUwLjFjMC0zLjQtMC41LTYuOC0xLjYtMTBjLTAuMi0wLjgtMC40LTEuNS0wLjMtMi4zYzAuMS0wLjgsMC40LTEuNiwwLjctMi40YzAuNy0xLjUsMS45LTMuMSwzLjctNGwwLDAgYzEuOC0wLjksMy43LTEuMSw1LjYtMC4zYzAuOSwwLjQsMS43LDEsMi40LDEuOGMwLjcsMC44LDEuMywxLjcsMS43LDIuOGMxLjUsNC42LDIuMiw5LjUsMi4zLDE0LjQiPjwvcGF0aD4NCiAgICAgICAgPHBhdGggZmlsbD0iI2VlZWVlZSIgZD0iTTg2LjMsNTAuMmwwLTAuOWwtMC4xLTAuOWwtMC4xLTEuOWMwLTAuOSwwLjItMS43LDAuNy0yLjNjMC41LTAuNywxLjMtMS4yLDIuMy0xLjRsMC4zLDAgYzAuOS0wLjIsMS45LDAsMi42LDAuNmMwLjcsMC41LDEuMywxLjQsMS40LDIuNGwwLjIsMi4ybDAuMSwxLjFsMCwxLjEiPjwvcGF0aD4NCiAgICAgICAgPHBhdGggZmlsbD0iI2ZmOTkyMiIgZD0iTTkzLjIsMzQuNmMwLjEsMC40LTAuMywwLjgtMC45LDFjLTAuNiwwLjItMS4yLDAuMS0xLjQtMC4yYy0wLjEtMC4zLDAuMy0wLjgsMC45LTEgQzkyLjQsMzQuMiw5MywzNC4zLDkzLjIsMzQuNnoiPjwvcGF0aD4NCiAgICAgICAgPHBhdGggZmlsbD0iI2ZmOTkyMiIgZD0iTTgxLjksMzguN2MwLjEsMC4zLDAuNywwLjMsMS4zLDAuMWMwLjYtMC4yLDEtMC42LDAuOS0wLjljLTAuMS0wLjMtMC43LTAuMy0xLjMtMC4xIEM4Mi4yLDM4LDgxLjgsMzguNCw4MS45LDM4Ljd6Ij48L3BhdGg+DQogICAgICAgIDxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik04OC41LDM2LjhjMC4xLDAuMy0wLjIsMC43LTAuNiwwLjhjLTAuNSwwLjItMC45LDAtMS4xLTAuM2MtMC4xLTAuMywwLjItMC43LDAuNi0wLjhDODcuOSwzNi4zLDg4LjQsMzYuNCw4OC41LDM2Ljh6Ij48L3BhdGg+DQogICAgICAgIDxwYXRoIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTg1LjksMzguOWMwLjIsMC42LDAuOCwwLjksMS40LDAuN2MwLjYtMC4yLDAuOS0wLjksMC42LTIuMWMwLjMsMS4yLDEsMS43LDEuNiwxLjVjMC42LTAuMiwwLjktMC44LDAuOC0xLjQiPjwvcGF0aD4NCiAgICAgICAgPHBhdGggZmlsbD0iIzY5OTRiNyIgc3Ryb2tlPSIjMDAwMDAwIiBkPSJNODYuOCw0Mi4zbDAuNCwyLjJjMC4xLDAuNCwwLjEsMC43LDAuMiwxLjFsMC4xLDEuMWMwLjEsMS4yLTAuOSwyLjMtMi4yLDIuM2MtMS4zLDAtMi41LTAuOC0yLjUtMS45bC0wLjEtMSBjMC0wLjMtMC4xLTAuNi0wLjItMWwtMC4zLTEuOSI+PC9wYXRoPg0KICAgICAgICA8cGF0aCBmaWxsPSIjNjk5NGI3IiBzdHJva2U9IiMwMDAwMDAiIGQ9Ik05Ni4yLDQwLjNsMC41LDIuN2MwLjEsMC41LDAuMiwwLjksMC4yLDEuNGwwLjEsMS40YzAuMSwxLjUtMC45LDIuOC0yLjIsMi45aDBjLTEuMywwLTIuNS0xLjEtMi42LTIuNCBMOTIuMSw0NWMwLTAuNC0wLjEtMC44LTAuMi0xLjJsLTAuNC0yLjUiPjwvcGF0aD4NCiAgICAgICAgPHBhdGggZmlsbD0iIzAwMDAwMCIgZD0iTTkxLjEsMzQuMWMwLjMsMC43LDAsMS40LTAuNywxLjZjLTAuNiwwLjItMS4zLTAuMS0xLjYtMC43Yy0wLjItMC42LDAtMS40LDAuNy0xLjZDOTAuMSwzMy4xLDkwLjgsMzMuNSw5MS4xLDM0LjF6Ij48L3BhdGg+DQogICAgICAgIDxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik04NS41LDM2LjNjMC4yLDAuNi0wLjEsMS4yLTAuNywxLjVjLTAuNiwwLjItMS4zLDAtMS41LTAuNkM4MywzNi43LDgzLjQsMzYsODQsMzUuOEM4NC42LDM1LjUsODUuMywzNS43LDg1LjUsMzYuM3oiPjwvcGF0aD4NCg0KICAgICAgPC9nPjwvc3ZnPg==',
   IMG_URL_TYPE: process.env.NEXT_PUBLIC_IMG_TYPE || 'Notion', // 此配置已失效，请勿使用；AMAZON方案不再支持，仅支持Notion方案。 ['Notion','AMAZON'] 站点图片前缀 默认 Notion:(https://notion.so/images/xx) ， AMAZON(https://s3.us-west-2.amazonaws.com/xxx)
   IMG_SHADOW: process.env.NEXT_PUBLIC_IMG_SHADOW || false, // 文章图片是否自动添加阴影
   IMG_COMPRESS_WIDTH: process.env.NEXT_PUBLIC_IMG_COMPRESS_WIDTH || 800, // Notion图片压缩宽度
