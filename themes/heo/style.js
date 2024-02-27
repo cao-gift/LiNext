@@ -19,13 +19,13 @@ const Style = () => {
 
       ::-webkit-scrollbar-thumb {
         background: rgba(60, 60, 67, 0.4);
-        border-radius: 8px;
+        border-radius: 2em;
         cursor: pointer;
       }
 
       ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+        width: 7px;
+        height: 7px;
       }
 
       #more {
