@@ -41,6 +41,7 @@ import { AdSlot } from '@/components/GoogleAdsense'
 import { siteConfig } from '@/lib/config'
 import { isBrowser } from '@/lib/utils'
 import { loadWowJS } from '@/lib/wow'
+import BlogMemos from './components/BlogMemos'
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
@@ -251,6 +252,36 @@ const LayoutArchive = props => {
         </div>
       </div>
   )
+}
+/**
+ * 说说
+ * @param {*} props
+ * @returns
+ */
+const LayoutMemos = (props) => {
+  const memoPageInfo = {
+    id: "2ab7483d3d42419ebf6dfa90b229103c", // 因为引入了评论互动，所以需要一个ID来对应加载页面评论，这里使用Notion这个菜单的pageID
+    type: "Memos",
+    title: "我的说说",
+  };
+  return  (   
+  <div className={`w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600 article`}>
+		{/* 去掉加密的Lock部分判断 */}
+    <div id="article-wrapper" className="overflow-x-auto flex-grow mx-auto md:w-full px-3 font-serif">  
+      <article itemScope itemType="https://schema.org/Movie" className="subpixel-antialiased overflow-y-hidden overflow-x-hidden" >
+        {/* Notion文章主体 */}
+        <section className='justify-center mx-auto max-w-2xl lg:max-w-full'>
+            <BlogMemos {...props}/>
+        </section>
+      </article>
+			{/* 移除了分享模块，如果需要可以保留，将 LayoutSlug的对应部分拷贝过来 */}
+      <div className='pt-4 border-dashed'></div>
+      {/* 评论互动 */}
+      <div className="duration-200 overflow-x-auto px-3">
+        <Comment frontMatter={memoPageInfo} />
+      </div>
+    </div>
+  </div>)
 }
 
 /**
@@ -507,6 +538,7 @@ export {
   LayoutIndex,
   LayoutSearch,
   LayoutArchive,
+  LayoutMemos,   //增加LayoutMemos组件Export
   LayoutSlug,
   Layout404,
   LayoutPostList,
