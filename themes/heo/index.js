@@ -269,14 +269,27 @@ const LayoutMemos = (props) => {
     <div id="article-wrapper" className="overflow-x-auto flex-grow mx-auto md:w-full px-3 font-serif">  
       <article itemScope itemType="https://schema.org/Movie" className="subpixel-antialiased overflow-y-hidden overflow-x-hidden" >
         {/* Notion文章主体 */}
-        <section className='justify-center mx-auto max-w-2xl lg:max-w-full'>
-            <BlogMemos {...props}/>
+        <section className="px-5 justify-center mx-auto">
+          <WWAds orientation="horizontal" className="w-full" />
+          <BlogMemos {...props}/>
+          <WWAds orientation="horizontal" className="w-full" />
         </section>
       </article>
-      <div className='pt-4 border-dashed'></div>
+      {fullWidth
+        ? null
+        : <div className={`${commentEnable && post ? '' : 'hidden'}`}>
+          <hr className="my-4 border-dashed" />
+          {/* 评论区上方广告 */}
+          <div className="py-2">
+              <AdSlot />
+          </div>
       {/* 评论互动 */}
-      <div className="duration-200 overflow-x-auto px-3">
-        <Comment frontMatter={memoPageInfo} />
+      <div className="duration-200 overflow-x-auto px-5">
+        <div className="text-2xl dark:text-white">
+          <i className="fas fa-comment mr-1" />
+          {locale.COMMON.COMMENTS}
+        </div>
+        <Comment frontMatter={memoPageInfo} className="" />
       </div>
     </div>
   </div>)
