@@ -305,7 +305,7 @@ const LayoutMemos = ({ post, ...props }) => {
             <div className="duration-200 overflow-x-auto px-5">
               <div className="text-2xl dark:text-white">
                 <i className="fas fa-comment mr-1" />
-                {locale && locale.COMMON && locale.COMMON.COMMENTS}
+                {locale.COMMON.COMMENTS}
               </div>
               <Comment frontMatter={post} className="" />
             </div>
