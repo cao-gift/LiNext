@@ -41,6 +41,7 @@ import { AdSlot } from '@/components/GoogleAdsense'
 import { siteConfig } from '@/lib/config'
 import { isBrowser } from '@/lib/utils'
 import { loadWowJS } from '@/lib/wow'
+import BlogMemos from './components/BlogMemos'
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
@@ -252,7 +253,69 @@ const LayoutArchive = props => {
       </div>
   )
 }
+/**
+ * 说说
+ * @param {*} props
+ * @returns
+ */
+const LayoutMemos = (props) => {
+  const { post } = props
+  const { locale, fullWidth } = useGlobal()
+  const [hasCode, setHasCode] = useState(false)
+  const commentEnable = siteConfig('COMMENT_TWIKOO_ENV_ID') || siteConfig('COMMENT_WALINE_SERVER_URL') || siteConfig('COMMENT_VALINE_APP_ID') ||
+    siteConfig('COMMENT_GISCUS_REPO') || siteConfig('COMMENT_CUSDIS_APP_ID') || siteConfig('COMMENT_UTTERRANCES_REPO') ||
+    siteConfig('COMMENT_GITALK_CLIENT_ID') || siteConfig('COMMENT_WEBMENTION_ENABLE')
+  const memoPageInfo = {
+    id: "2ab7483d3d42419ebf6dfa90b229103c", // 因为引入了评论互动，所以需要一个ID来对应加载页面评论，这里使用Notion这个菜单的pageID
+    type: "Memos",
+    title: "我的说说",
+  };
+  return (
+    <div className={`w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600 article`}>
+      <div id="article-wrapper" className="flex-grow mx-auto md:w-full px-3 font-serif">
+        <article itemScope itemType="https://schema.org/Movie" className="subpixel-antialiased overflow-y-hidden overflow-x-hidden">
+          {/* Notion文章主体 */}
+          <section className="px-5 justify-center mx-auto">
+            <WWAds orientation="horizontal" className="w-full" />
+            <BlogMemos {...props}/>
+            <WWAds orientation="horizontal" className="w-full" />
+          </section>
+          {/* 分享 */}
+          <ShareBar post={post} />
+          {post?.type === 'Post' && (
+            <div className="px-5">
+              {/* 版权 */}
+              <ArticleCopyright {...props} />
+              {/* 文章推荐 */}
+              <ArticleRecommend {...props} />
+              {/* 上一篇\下一篇文章 */}
+              <ArticleAdjacent {...props} />
+             </div>
+          )}
+        </article>
 
+        {fullWidth
+          ? null
+          : <div className={`${commentEnable && post ? '' : 'hidden'}`}>
+            <hr className="my-4 border-dashed" />
+            {/* 评论区上方广告 */}
+            <div className="py-2">
+              <AdSlot />
+            </div>
+            {/* 评论互动 */}
+            <div className="duration-200 overflow-x-auto px-5">
+              <div className="text-2xl dark:text-white">
+                <i className="fas fa-comment mr-1" />
+                {locale.COMMON.COMMENTS}
+              </div>
+              <Comment frontMatter={memoPageInfo} className="" />
+            </div>
+          </div>}
+      </div>
+      <FloatTocButton {...props} />
+    </div>
+  )
+}
 /**
  * 文章详情
  * @param {*} props
@@ -507,6 +570,7 @@ export {
   LayoutIndex,
   LayoutSearch,
   LayoutArchive,
+  LayoutMemos,   //增加LayoutMemos组件Export
   LayoutSlug,
   Layout404,
   LayoutPostList,
