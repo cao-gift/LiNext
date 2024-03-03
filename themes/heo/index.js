@@ -307,7 +307,7 @@ const LayoutMemos = ({ post, ...props }) => {
                 <i className="fas fa-comment mr-1" />
                 {locale.COMMON.COMMENTS}
               </div>
-              <Comment frontMatter={post} className="" />
+              <Comment frontMatter={memoPageInfo} className="" />
             </div>
           </div>}
       </div>
