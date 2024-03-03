@@ -258,6 +258,18 @@ const LayoutArchive = props => {
  * @param {*} props
  * @returns
  */
+export async function getServerSideProps(context) {
+  // 获取 COMMON 变量
+  const COMMON = await getCommon();
+
+  // 返回 props
+  return {
+    props: {
+      COMMON,
+    },
+  };
+}
+
 const LayoutMemos = ({ fullWidth, hasCode, locale,commentEnable,COMMON, ...props }) => {
   const memoPageInfo = {
     id: "2ab7483d3d42419ebf6dfa90b229103c", // 因为引入了评论互动，所以需要一个ID来对应加载页面评论，这里使用Notion这个菜单的pageID
