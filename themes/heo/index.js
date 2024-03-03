@@ -270,21 +270,16 @@ const LayoutMemos = (props) => {
       <article itemScope itemType="https://schema.org/Movie" className="subpixel-antialiased overflow-y-hidden overflow-x-hidden" >
         {/* Notion文章主体 */}
         <section className="px-5 justify-center mx-auto">
-	  <WWAds orientation="horizontal" className="w-full" />
             <BlogMemos {...props}/>
         </section>
       </article>
       <div className='pt-4 border-dashed'></div>
       {/* 评论互动 */}
-                <div className="duration-200 overflow-x-auto px-5">
-                  <div className="text-2xl dark:text-white">
-                    <i className="fas fa-comment mr-1" />
-                    {locale.COMMON.COMMENTS}
-                  </div>
-                  <Comment frontMatter={post} className="" />
-                </div>
-              </div>}
-          </div>
+      <div className="duration-200 overflow-x-auto px-3">
+        <Comment frontMatter={memoPageInfo} />
+      </div>
+    </div>
+  </div>)
 }
 
 /**
