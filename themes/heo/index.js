@@ -274,7 +274,20 @@ const LayoutMemos = ({ fullWidth, hasCode, locale, commentEnable, ...props }) =>
             <BlogMemos {...props}/>
             <WWAds orientation="horizontal" className="w-full" />
           </section>
+          {/* 分享 */}
+          <ShareBar post={post} />
+          {post?.type === 'Post' && (
+            <div className="px-5">
+              {/* 版权 */}
+              <ArticleCopyright {...props} />
+              {/* 文章推荐 */}
+              <ArticleRecommend {...props} />
+              {/* 上一篇\下一篇文章 */}
+              <ArticleAdjacent {...props} />
+             </div>
+          )}
         </article>
+
         {fullWidth
           ? null
           : <div className={`${commentEnable && post ? '' : 'hidden'}`}>
@@ -287,6 +300,7 @@ const LayoutMemos = ({ fullWidth, hasCode, locale, commentEnable, ...props }) =>
             <div className="duration-200 overflow-x-auto px-5">
               <div className="text-2xl dark:text-white">
                 <i className="fas fa-comment mr-1" />
+                {locale.COMMON.COMMENTS}
               </div>
               <Comment frontMatter={memoPageInfo} {...props} />
             </div>
