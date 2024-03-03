@@ -258,17 +258,7 @@ const LayoutArchive = props => {
  * @param {*} props
  * @returns
  */
-export async function getServerSideProps(context) {
-  // 获取 COMMON 变量
-  const COMMON = await getCommon();
-
-  // 返回 props
-  return {
-    props: {
-      COMMON,
-    },
-  };
-}
+import { getServerSideProps } from 'next'
 
 const LayoutMemos = ({ fullWidth, hasCode, locale,commentEnable,COMMON, ...props }) => {
   const memoPageInfo = {
@@ -310,6 +300,20 @@ const LayoutMemos = ({ fullWidth, hasCode, locale,commentEnable,COMMON, ...props
     </div>
   )
 }
+
+export async function getServerSideProps() {
+  // Fetch the COMMON variable from your data source
+  const COMMON = await fetchCommonVariable()
+
+  // Return the COMMON variable as props
+  return {
+    props: {
+      COMMON,
+    },
+  }
+}
+
+export default LayoutMemos
 
 /**
  * 文章详情
