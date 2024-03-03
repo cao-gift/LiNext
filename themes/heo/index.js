@@ -270,7 +270,9 @@ const LayoutMemos = (props) => {
       <article itemScope itemType="https://schema.org/Movie" className="subpixel-antialiased overflow-y-hidden overflow-x-hidden" >
         {/* Notion文章主体 */}
         <section className="px-5 justify-center mx-auto">
+          <WWAds orientation="horizontal" className="w-full" />
             <BlogMemos {...props}/>
+          <WWAds orientation="horizontal" className="w-full" />
         </section>
       </article>
       <div className='pt-4 border-dashed'></div>
