@@ -258,7 +258,12 @@ const LayoutArchive = props => {
  * @param {*} props
  * @returns
  */
-const LayoutMemos = ({ fullWidth, hasCode, locale, commentEnable, post, ...props }) => {
+const LayoutMemos = ({ post, ...props }) => {
+  const { locale, fullWidth } = useGlobal()
+  const [hasCode, setHasCode] = useState(false)
+  const commentEnable = siteConfig('COMMENT_TWIKOO_ENV_ID') || siteConfig('COMMENT_WALINE_SERVER_URL') || siteConfig('COMMENT_VALINE_APP_ID') ||
+    siteConfig('COMMENT_GISCUS_REPO') || siteConfig('COMMENT_CUSDIS_APP_ID') || siteConfig('COMMENT_UTTERRANCES_REPO') ||
+    siteConfig('COMMENT_GITALK_CLIENT_ID') || siteConfig('COMMENT_WEBMENTION_ENABLE')
   const memoPageInfo = {
     id: "2ab7483d3d42419ebf6dfa90b229103c", // 因为引入了评论互动，所以需要一个ID来对应加载页面评论，这里使用Notion这个菜单的pageID
     type: "Memos",
