@@ -258,7 +258,7 @@ const LayoutArchive = props => {
  * @param {*} props
  * @returns
  */
-const LayoutMemos = ({ fullWidth, hasCode, locale, commentEnable, COMMON, ...props }) => {
+const LayoutMemos = ({ fullWidth, hasCode, locale, commentEnable, ...props }) => {
   const memoPageInfo = {
     id: "2ab7483d3d42419ebf6dfa90b229103c", // 因为引入了评论互动，所以需要一个ID来对应加载页面评论，这里使用Notion这个菜单的pageID
     type: "Memos",
@@ -271,7 +271,7 @@ const LayoutMemos = ({ fullWidth, hasCode, locale, commentEnable, COMMON, ...pro
           {/* Notion文章主体 */}
           <section className="px-5 justify-center mx-auto">
             <WWAds orientation="horizontal" className="w-full" />
-            <BlogMemos COMMON={COMMON} {...props}/>
+            <BlogMemos {...props}/>
             <WWAds orientation="horizontal" className="w-full" />
           </section>
         </article>
@@ -297,7 +297,6 @@ const LayoutMemos = ({ fullWidth, hasCode, locale, commentEnable, COMMON, ...pro
     </div>
   )
 }
-
 
 /**
  * 文章详情
