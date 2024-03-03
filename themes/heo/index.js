@@ -264,35 +264,37 @@ const LayoutMemos = (props) => {
     type: "Memos",
     title: "我的说说",
   };
-  return  (   
-  <div className={`w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600 article`}>
-    <div id="article-wrapper" className="overflow-x-auto flex-grow mx-auto md:w-full px-3 font-serif">  
-      <article itemScope itemType="https://schema.org/Movie" className="subpixel-antialiased overflow-y-hidden overflow-x-hidden" >
-        {/* Notion文章主体 */}
-        <section className="px-5 justify-center mx-auto">
-          <WWAds orientation="horizontal" className="w-full" />
-          <BlogMemos {...props}/>
-          <WWAds orientation="horizontal" className="w-full" />
-        </section>
-      </article>
-      {fullWidth
-        ? null
-        : <div className={`${commentEnable && post ? '' : 'hidden'}`}>
-          <hr className="my-4 border-dashed" />
-          {/* 评论区上方广告 */}
-          <div className="py-2">
-              <AdSlot />
+  return (
+    <div className={`w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600 article`}>
+      <div id="article-wrapper" className="overflow-x-auto flex-grow mx-auto md:w-full px-3 font-serif">  
+        <article itemScope itemType="https://schema.org/Movie" className="subpixel-antialiased overflow-y-hidden overflow-x-hidden" >
+          {/* Notion文章主体 */}
+          <section className="px-5 justify-center mx-auto">
+            <WWAds orientation="horizontal" className="w-full" />
+            <BlogMemos {...props}/>
+            <WWAds orientation="horizontal" className="w-full" />
+          </section>
+        </article>
+        {fullWidth
+          ? null
+          : <div className={`${commentEnable && post ? '' : 'hidden'}`}>
+            <hr className="my-4 border-dashed" />
+            {/* 评论区上方广告 */}
+            <div className="py-2">
+                <AdSlot />
+            </div>
+        {/* 评论互动 */}
+        <div className="duration-200 overflow-x-auto px-5">
+          <div className="text-2xl dark:text-white">
+            <i className="fas fa-comment mr-1" />
+            {locale.COMMON.COMMENTS}
           </div>
-      {/* 评论互动 */}
-      <div className="duration-200 overflow-x-auto px-5">
-        <div className="text-2xl dark:text-white">
-          <i className="fas fa-comment mr-1" />
-          {locale.COMMON.COMMENTS}
+          <Comment frontMatter={memoPageInfo} className="" />
         </div>
-        <Comment frontMatter={memoPageInfo} className="" />
       </div>
     </div>
-  </div>)
+  </div>
+  )
 }
 
 /**
