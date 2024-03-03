@@ -258,7 +258,8 @@ const LayoutArchive = props => {
  * @param {*} props
  * @returns
  */
-const LayoutMemos = ({ post, ...props }) => {
+const LayoutMemos = (props) => {
+  const { post, lock, validPassword } = props
   const { locale, fullWidth } = useGlobal()
   const [hasCode, setHasCode] = useState(false)
   const commentEnable = siteConfig('COMMENT_TWIKOO_ENV_ID') || siteConfig('COMMENT_WALINE_SERVER_URL') || siteConfig('COMMENT_VALINE_APP_ID') ||
