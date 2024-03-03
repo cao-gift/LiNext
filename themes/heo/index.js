@@ -289,7 +289,7 @@ const LayoutMemos = ({ fullWidth, hasCode, locale, commentEnable, ...props }) =>
                 <i className="fas fa-comment mr-1" />
                 {locale.COMMON.COMMENTS}
               </div>
-              <Comment frontMatter={memoPageInfo} className="" />
+              <Comment frontMatter={memoPageInfo} {...props} />
             </div>
           </div>}
       </div>
@@ -297,7 +297,6 @@ const LayoutMemos = ({ fullWidth, hasCode, locale, commentEnable, ...props }) =>
     </div>
   )
 }
-
 /**
  * 文章详情
  * @param {*} props
