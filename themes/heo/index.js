@@ -264,11 +264,7 @@ const LayoutMemos = ({ fullWidth, hasCode, locale,commentEnable,COMMON, ...props
     type: "Memos",
     title: "我的说说",
   };
-    // 检查 COMMON 对象是否已定义
-  if (!COMMON) {
-    console.error("COMMON object is undefined");
-    return null;
-  }
+
   return (
     <div className={`w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600 article`}>
       <div id="article-wrapper" className="flex-grow mx-auto md:w-full px-3 font-serif">
@@ -276,7 +272,7 @@ const LayoutMemos = ({ fullWidth, hasCode, locale,commentEnable,COMMON, ...props
           {/* Notion文章主体 */}
           <section className="px-5 justify-center mx-auto">
             <WWAds orientation="horizontal" className="w-full" />
-            <BlogMemos {...props}/>
+            <BlogMemos COMMON={COMMON} {...props}/>
             <WWAds orientation="horizontal" className="w-full" />
           </section>
         </article>
