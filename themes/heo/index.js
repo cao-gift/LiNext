@@ -258,15 +258,15 @@ const LayoutArchive = props => {
  * @param {*} props
  * @returns
  */
-import { getServerSideProps } from 'next'
-
 const LayoutMemos = ({ fullWidth, hasCode, locale,commentEnable,COMMON, ...props }) => {
   const memoPageInfo = {
     id: "2ab7483d3d42419ebf6dfa90b229103c", // 因为引入了评论互动，所以需要一个ID来对应加载页面评论，这里使用Notion这个菜单的pageID
     type: "Memos",
     title: "我的说说",
   };
-
+  if (!COMMON) {
+    throw new Error("COMMON object is not defined in props");
+  }
   return (
     <div className={`w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600 article`}>
       <div id="article-wrapper" className="flex-grow mx-auto md:w-full px-3 font-serif">
@@ -300,20 +300,6 @@ const LayoutMemos = ({ fullWidth, hasCode, locale,commentEnable,COMMON, ...props
     </div>
   )
 }
-
-export async function getServerSideProps() {
-  // Fetch the COMMON variable from your data source
-  const COMMON = await fetchCommonVariable()
-
-  // Return the COMMON variable as props
-  return {
-    props: {
-      COMMON,
-    },
-  }
-}
-
-export default LayoutMemos
 
 /**
  * 文章详情
