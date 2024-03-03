@@ -292,7 +292,7 @@ const LayoutMemos = (props) => {
           <Comment frontMatter={memoPageInfo} />
         </div>
       </div>
-    </div>
+    </div>}
   </div>
   )
 }
