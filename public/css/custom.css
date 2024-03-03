@@ -61,7 +61,7 @@ footer:before {
 /* 侧边栏个人信息卡片动态渐变色 */
 div.border {
   background: linear-gradient(
-    135deg,
+    150deg,
     #e8d8b9 0%,
     #eccec5 25%,
     #a3e9eb 50%,
