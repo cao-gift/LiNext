@@ -258,7 +258,7 @@ const LayoutArchive = props => {
  * @param {*} props
  * @returns
  */
-const LayoutMemos = ({ fullWidth, ...props }) => {
+const LayoutMemos = ({ fullWidth, hasCode, ...props }) => {
   const memoPageInfo = {
     id: "2ab7483d3d42419ebf6dfa90b229103c", // 因为引入了评论互动，所以需要一个ID来对应加载页面评论，这里使用Notion这个菜单的pageID
     type: "Memos",
