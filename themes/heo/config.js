@@ -5,7 +5,7 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到故人博客', url: 'https://yyyy.gay' },
+    { title: '欢迎来到故人博客', url: 'https://88lin.eu.org' },
     { title: '点击使用ChatGPT', url: 'https://yyyy.gay/article/34' }
   ],
 
@@ -42,7 +42,7 @@ const CONFIG = {
     '🤖️ 数码科技爱好者',
     '🧱 团队小组发动机'
   ],
-  HEO_INFO_CARD_URL: 'https://githubfast.com/88lin', // 个人资料底部按钮链接
+  HEO_INFO_CARD_URL: 'https://github.com/88lin', // 个人资料底部按钮链接
 
   // 用户技能图标
   HEO_GROUP_ICONS: [
