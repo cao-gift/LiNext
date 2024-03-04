@@ -246,3 +246,19 @@ div.bg-indigo-400:hover::before,button.group.duration-200:hover::before {
 div.bg-indigo-400:active,button.group.duration-200:active {
   background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
 }
+/*搜索框特效*/
+input.text-black {
+border: 2px solid transparent;
+padding-left: 0.8em;
+outline: none;
+overflow: hidden;
+background-color: #F3F3F3;
+border-radius: 10px;
+transition: all 0.5s;
+}
+input.text-black:hover,
+input.text-black:focus {
+border: 2px solid #4A9DEC;
+box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+background-color: white;
+}
