@@ -258,7 +258,7 @@ const LayoutArchive = props => {
  * @param {*} props
  * @returns
  */
-const LayoutMemos = (props) => {
+const LayoutMemos = props => {
   const { post, lock, validPassword } = props
   const { locale, fullWidth } = useGlobal()
   
@@ -336,7 +336,7 @@ const LayoutMemos = (props) => {
                     <i className="fas fa-comment mr-1" />
                     {locale.COMMON.COMMENTS}
                   </div>
-                  <Comment frontMatter={memoPageInfo} className="" />
+                  <Comment frontMatter={memoPageInfo} />
                 </div>
               </div>}
           </div>
