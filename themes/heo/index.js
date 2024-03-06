@@ -259,12 +259,20 @@ const LayoutArchive = props => {
  * @returns
  */
 const LayoutMemos = (props) => {
-  const { post } = props
+  const { post, lock, validPassword } = props
   const { locale, fullWidth } = useGlobal()
+  
   const [hasCode, setHasCode] = useState(false)
+
+  useEffect(() => {
+    const hasCode = document.querySelectorAll('[class^="language-"]').length > 0
+    setHasCode(hasCode)
+  }, [])
+  
   const commentEnable = siteConfig('COMMENT_TWIKOO_ENV_ID') || siteConfig('COMMENT_WALINE_SERVER_URL') || siteConfig('COMMENT_VALINE_APP_ID') ||
     siteConfig('COMMENT_GISCUS_REPO') || siteConfig('COMMENT_CUSDIS_APP_ID') || siteConfig('COMMENT_UTTERRANCES_REPO') ||
     siteConfig('COMMENT_GITALK_CLIENT_ID') || siteConfig('COMMENT_WEBMENTION_ENABLE')
+  
   const memoPageInfo = {
     id: "2ab7483d3d42419ebf6dfa90b229103c", // 因为引入了评论互动，所以需要一个ID来对应加载页面评论，这里使用Notion这个菜单的pageID
     type: "Memos",
@@ -272,8 +280,16 @@ const LayoutMemos = (props) => {
   };
   return (
     <div className={`w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600 article`}>
-      <div id="article-wrapper" className="flex-grow mx-auto md:w-full px-3 font-serif">
-        <article itemScope itemType="https://schema.org/Movie" className="subpixel-antialiased overflow-y-hidden overflow-x-hidden">
+        <div
+            id="article-wrapper"
+            className="overflow-x-auto flex-grow mx-auto md:w-full md:px-5 "
+        >
+            <article
+              itemScope
+              itemType="https://schema.org/Movie"
+              data-wow-delay=".2s"
+              className="wow fadeInUp subpixel-antialiased overflow-y-hidden"
+            >
           {/* Notion文章主体 */}
           <section className="px-5 justify-center mx-auto">
             <WWAds orientation="horizontal" className="w-full" />
