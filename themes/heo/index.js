@@ -259,7 +259,7 @@ const LayoutArchive = props => {
  * @returns
  */
 const LayoutMemos = props => {
-  const { post, lock, validPassword } = props
+  const { lock, validPassword } = props
   const { locale, fullWidth } = useGlobal()
   
   const [hasCode, setHasCode] = useState(false)
@@ -301,24 +301,11 @@ const LayoutMemos = props => {
                 <BlogMemos {...props}/>
                 <WWAds orientation="horizontal" className="w-full" />
               </section>
-
-              {/* 分享 */}
-              <ShareBar post={post} />
-              {post?.type === 'Post' && (
-                <div className="px-5">
-                  {/* 版权 */}
-                  <ArticleCopyright {...props} />
-                  {/* 文章推荐 */}
-                  <ArticleRecommend {...props} />
-                  {/* 上一篇\下一篇文章 */}
-                  <ArticleAdjacent {...props} />
-                </div>
-              )}
             </article>
 
             {fullWidth
               ? null
-              : <div className={`${commentEnable && post ? '' : 'hidden'}`}>
+              : <div className={`${commentEnable && memoPageInfo ? '' : 'hidden'}`}>
                 <hr className="my-4 border-dashed" />
                 {/* 评论区上方广告 */}
                 <div className="py-2">
