@@ -304,7 +304,7 @@ const LayoutMemos = (props) => {
               {/* Notion文章主体 */}
               <section className="px-5 justify-center mx-auto">
                 <WWAds orientation="horizontal" className="w-full" />
-                {post && <NotionPage post={post} />}
+                <BlogMemos {...props}/>
                 <WWAds orientation="horizontal" className="w-full" />
               </section>
 
@@ -336,7 +336,7 @@ const LayoutMemos = (props) => {
                     <i className="fas fa-comment mr-1" />
                     {locale.COMMON.COMMENTS}
                   </div>
-                  <Comment frontMatter={post} className="" />
+                  <Comment frontMatter={memoPageInfo} className="" />
                 </div>
               </div>}
           </div>
