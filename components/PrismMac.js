@@ -221,7 +221,6 @@ const renderCustomCode = () => {
         css: firstComment.includes('/* custom */'),
         javascript: firstComment.includes('// custom')
       }[language];
-
       let originalCode = codeElement.textContent;
       const toolbarParent = codeElement.closest('div.code-toolbar').parentNode;
 
