@@ -361,5 +361,4 @@ const fixCodeLineStyle = () => {
     }
   }, 10)
 }
-
 export default PrismMac
