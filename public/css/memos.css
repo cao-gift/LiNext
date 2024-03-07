@@ -11,10 +11,6 @@ body.light-theme,
     --color-fg-muted: #00a1d6;  /* 更改为前景色 */
     --color-border-default: #f27474;  /* 更改为默认边框色 */
     --color-memos-pre-bg: #000;  /* 更改为备忘录预背景色 */
-
-    /* variables for js, must be the same as these in @custom-media queries */
-    --phoneWidth: (max-width: 684px);
-    --tabletWidth: (max-width: 900px);
 }
 
 .dark {
@@ -36,7 +32,7 @@ body.light-theme,
 
 h2 {
     font-weight: 600;
-    line-height: 0.875;
+    line-height: 1;
     font-weight: 600; 
     padding-bottom: .3em;
     font-size: 2em;
@@ -151,6 +147,7 @@ h2 {
     padding: 0.75rem;
     overflow-wrap: break-word;
     word-break: break-all;
+    white-space: pre-wrap; 
 }
 
 .memos__text code {
@@ -162,6 +159,7 @@ h2 {
     font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     font-size: .875rem;
     line-height: 1.5rem;
+    overflow-wrap: break-word;
 }
 
 .memos__text pre code {
