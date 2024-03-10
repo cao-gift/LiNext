@@ -40,7 +40,7 @@ import WWAds from '@/components/WWAds'
 import { AdSlot } from '@/components/GoogleAdsense'
 import { siteConfig } from '@/lib/config'
 import { isBrowser } from '@/lib/utils'
-import { loadWowJS } from '@/lib/wow'
+import { loadWowJS } from '@/lib/plugins/wow'
 import BlogMemos from './components/BlogMemos'
 
 /**
