@@ -62,6 +62,7 @@ const BLOG = {
     '"PingFang SC"',
     '-apple-system',
     'BlinkMacSystemFont',
+    '"LXGW WenKai"',
     '"Microsoft YaHei"',
     '"Segoe UI Emoji"',
     '"Apple Color Emoji"',
@@ -72,7 +73,6 @@ const BLOG = {
     '"Helvetica Neue"',
     'Helvetica',
     '"Source Han Sans SC"',
-    '"LXGW WenKai"',
     'Arial'
   ],
   // 衬线字体 例如'"LXGW WenKai"'
