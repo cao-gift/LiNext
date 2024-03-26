@@ -47,7 +47,7 @@
 
 // Memos Start
 var memo = {
-    host: 'https://me.edui.fun/explore',
+    host: 'https://me.edui.fun',
     limit: '20',
     creatorId: '1',
     domId: '#memos',
