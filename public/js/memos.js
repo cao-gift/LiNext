@@ -48,7 +48,7 @@
 // Memos Start
 var memo = {
     host: 'https://me.edui.fun',
-    limit: '20',
+    limit: '10',
     creatorId: '101',
     domId: '#memos',
     username: '故人博客',
