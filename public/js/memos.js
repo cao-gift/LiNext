@@ -49,7 +49,7 @@
 var memo = {
     host: 'https://me.edui.fun',
     limit: '20',
-    creatorId: '1',
+    creatorId: '2',
     domId: '#memos',
     username: '故人博客',
     name: 'Apricity'
