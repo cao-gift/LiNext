@@ -47,8 +47,8 @@
 
 // Memos Start
 var memo = {
-    host: 'https://memos.chenge.ink',
-    limit: '30',
+    host: 'https://immmmm.com/bbs',
+    limit: '20',
     creatorId: '1',
     domId: '#memos',
     username: '故人博客',
