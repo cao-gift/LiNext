@@ -62,6 +62,9 @@ module.exports = {
         'gray-2': '#F3F4F6',
         'gray-7': '#CED4DA'
       },
+      backgroundImage: {
+        'rainbow-divider-dark': 'linear-gradient(90deg, #101414 0%, #101414 50%, transparent 50%, transparent 100%)',
+      },
       maxWidth: {
         side: '14rem',
         '9/10': '90%'
