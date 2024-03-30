@@ -265,17 +265,15 @@ const LayoutMemos = props => {
   const [hasCode, setHasCode] = useState(false)
 
   useEffect(() => {
-    const hasCode = document.querySelectorAll('[class^="language-"]').length > 0
-    setHasCode(hasCode)
-  }, [])
+    const codeElements = document.querySelectorAll('[class^="language-"]')
+    setHasCode(codeElements.length > 0)
+  }, [fullWidth])
   
-  const commentEnable = siteConfig('COMMENT_TWIKOO_ENV_ID') || siteConfig('COMMENT_WALINE_SERVER_URL') || siteConfig('COMMENT_VALINE_APP_ID') ||
-    siteConfig('COMMENT_GISCUS_REPO') || siteConfig('COMMENT_CUSDIS_APP_ID') || siteConfig('COMMENT_UTTERRANCES_REPO') ||
-    siteConfig('COMMENT_GITALK_CLIENT_ID') || siteConfig('COMMENT_WEBMENTION_ENABLE')
+  const commentEnable = siteConfig('COMMENT_TWIKOO_ENV_ID') || siteConfig('COMMENT_WEBMENTION_ENABLE')
   
   const memoPageInfo = {
     id: "2ab7483d3d42419ebf6dfa90b229103c", 
-    type: "Memos",
+    type: "Article",
     title: "我的说说",
   };
 
@@ -291,7 +289,7 @@ const LayoutMemos = props => {
           >
             <article
               itemScope
-              itemType="https://schema.org/Movie"
+              itemType="https://schema.org/Article"
               data-wow-delay=".2s"
               className="wow fadeInUp subpixel-antialiased overflow-y-hidden"
             >
@@ -317,7 +315,7 @@ const LayoutMemos = props => {
                     <i className="fas fa-comment mr-1" />
                     {locale.COMMON.COMMENTS}
                   </div>
-                  <Comment frontMatter={memoPageInfo} />
+                  <Comment frontMatter={post} />
                 </div>
               </div>}
           </div>
