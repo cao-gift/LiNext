@@ -10,7 +10,7 @@ body.light-theme,
     --color-tag-hover: #54a3ff;  /* 更改为标签悬停色 */
     --color-fg-muted: #00a1d6;  /* 更改为前景色 */
     --color-border-default: #f27474;  /* 更改为默认边框色 */
-    --color-memos-pre-bg: #000;  /* 更改为备忘录预背景色 */
+    --color-memos-pre-bg: #f3f4f6; /* 更改为备忘录预背景色 */
 }
 
 .dark {
