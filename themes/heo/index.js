@@ -273,7 +273,7 @@ const LayoutMemos = props => {
   
   const memoPageInfo = {
     id: "2ab7483d3d42419ebf6dfa90b229103c", 
-    type: "Article",
+    type: "Movie",
     title: "我的说说",
   };
 
@@ -289,7 +289,7 @@ const LayoutMemos = props => {
           >
             <article
               itemScope
-              itemType="https://schema.org/Article"
+              itemType="https://schema.org/Movie"
               data-wow-delay=".2s"
               className="wow fadeInUp subpixel-antialiased overflow-y-hidden"
             >
@@ -310,15 +310,13 @@ const LayoutMemos = props => {
                     <AdSlot />
                 </div>
                 {/* 评论互动 */}
-              {post && (
                 <div className="duration-200 overflow-x-auto px-5">
                   <div className="text-2xl dark:text-white">
                     <i className="fas fa-comment mr-1" />
                     {locale.COMMON.COMMENTS}
                   </div>
-                  <Comment frontMatter={post} />
+                  <Comment frontMatter={memoPageInfo} />
                 </div>
-              )}
               </div>}
           </div>
         )}
