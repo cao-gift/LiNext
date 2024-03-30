@@ -58,8 +58,8 @@ footer:before {
     background-color: rgba(0, 0, 0, 0);
 }
 
-/* 侧边栏个人信息卡片动态渐变色 */
-div.border {
+/* 卡片动态渐变色 */
+div.border:not(div.animate__animated) {
   background: linear-gradient(
     150deg,
     #e8d8b9 0%,
@@ -85,7 +85,7 @@ div.border {
 }
             
 /* 黑夜模式适配 */
-.dark div.border {
+.dark div.border:not(div.animate__animated) {
   background:  #191919ee;
 }
 /*设置鼠标样式*/
