@@ -5,7 +5,7 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到故人博客', url: 'https://88lin.eu.org' },
+    { title: '欢迎来到故人博客', url: 'https://520.txsb.gq/gzh/index.html' },
     { title: '点击使用ChatGPT', url: 'https://yyyy.gay/article/34' }
   ],
 
