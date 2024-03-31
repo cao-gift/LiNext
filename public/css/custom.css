@@ -85,7 +85,7 @@ div.border:not(div.animate__animated):not(div.lg\:p-6.p-4.border.rounded-xl.bg-\
 }
             
 /* 黑夜模式适配 */
-.dark div.border:not(div.animate__animated) {
+.dark div.border:not(div.animate__animated):not(.lg\:p-6.p-4.border.rounded-xl.bg-\[\#57bd6a\]) {
   background:  #191919ee;
 }
 /*设置鼠标样式*/
