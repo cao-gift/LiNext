@@ -59,9 +59,9 @@ footer:before {
 }
 
 /* 卡片动态渐变色 */
-div.border:not(div.animate__animated):not(div.lg\:p-6.p-4.border.rounded-xl.bg-\[\#57bd6a\]) {
+div.sticky.top-20.space-y-4 > div.border.dark\:border-gray-700,div.bg-\[\#4f65f0\]{
   background: linear-gradient(
-    150deg,
+    -45deg,
     #e8d8b9 0%,
     #eccec5 25%,
     #a3e9eb 50%,
@@ -69,6 +69,7 @@ div.border:not(div.animate__animated):not(div.lg\:p-6.p-4.border.rounded-xl.bg-\
     #eec1ea 100%
   );
   background-size: 400% 400%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   -webkit-animation: Gradient 10s ease infinite;
   -moz-animation: Gradient 10s ease infinite;
   animation: Gradient 10s ease infinite !important;
@@ -107,9 +108,10 @@ div.border:not(div.animate__animated):not(div.lg\:p-6.p-4.border.rounded-xl.bg-\
   }
 }         
 /* 黑夜模式适配 */
-.dark div.border:not(div.animate__animated):not(.lg\:p-6.p-4.border.rounded-xl.bg-\[\#57bd6a\]) {
+.dark div.sticky.top-20.space-y-4 > div.border.dark\:border-gray-700{
   background:  #191919ee;
 }
+
 /*设置鼠标样式*/
 body {
     cursor: url(https://www.dreamwings.cn/wp-content/themes/kotha/images/1.cur),
@@ -119,17 +121,16 @@ a,img {
     cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
         default;
 }
+
 /* 滚动条样式 */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
-
 ::-webkit-scrollbar-track {
   background-color: rgba(73, 177, 245, 0.2);
   border-radius: 2em;
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: rgb(59 130 246);
   background-image: -webkit-linear-gradient(
@@ -144,10 +145,10 @@ a,img {
   );
   border-radius: 2em;
 }
-
 ::-webkit-scrollbar-corner {
   background-color: transparent;
 }
+
 /*添加顶部加载进度条*/
 .pace {
   -webkit-pointer-events: none;
@@ -168,12 +169,10 @@ a,img {
   border: 1px #e3e8f7;
   overflow: hidden;
 }
-
 .pace-inactive .pace-progress {
   opacity: 0;
   transition: 0.3s ease-in;
 }
-
 .pace .pace-progress {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -197,7 +196,6 @@ a,img {
   animation: gradient 1.5s ease infinite;
   background-size: 200%;
 }
-
 .pace.pace-inactive {
   opacity: 0;
   transition: 0.3s;
@@ -214,6 +212,7 @@ a,img {
     background-position: 0% 50%;
   }
 }
+
 /*按钮特效*/
 div.bg-indigo-400,button.group.duration-200 {
   text-decoration: none;
@@ -231,12 +230,10 @@ div.bg-indigo-400,button.group.duration-200 {
   z-index: 1;
   transition: all 200ms ease-in-out;
 }
-
 div.bg-indigo-400:hover,button.group.duration-200:hover {
   animation: ani 8s linear infinite;
   border: none;
 }
-
 @keyframes ani {
   0% {
     background-position: 0%;
@@ -246,7 +243,6 @@ div.bg-indigo-400:hover,button.group.duration-200:hover {
     background-position: 400%;
   }
 }
-
 div.bg-indigo-400:before,button.group.duration-200:before {
   content: "";
   position: absolute;
@@ -260,14 +256,13 @@ div.bg-indigo-400:before,button.group.duration-200:before {
   border-radius: 35px;
   transition: 1s;
 }
-
 div.bg-indigo-400:hover::before,button.group.duration-200:hover::before {
   filter: blur(20px);
 }
-
 div.bg-indigo-400:active,button.group.duration-200:active {
   background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
 }
+
 /*搜索框特效*/
 input.text-black {
 border: 2px solid transparent;
