@@ -269,11 +269,11 @@ const LayoutMemos = props => {
     setHasCode(codeElements.length > 0)
   }, [fullWidth])
   
-  const commentEnable = siteConfig('COMMENT_TWIKOO_ENV_ID') || siteConfig('COMMENT_WEBMENTION_ENABLE')
+  const commentEnable = siteConfig('COMMENT_WALINE_SERVER_URL')
   
   const memoPageInfo = {
     id: "2ab7483d3d42419ebf6dfa90b229103c", 
-    type: "Movie",
+    type: "memos",
     title: "我的说说",
   };
 
