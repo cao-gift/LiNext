@@ -59,7 +59,7 @@ footer:before {
 }
 
 /* 卡片动态渐变色 */
-div.border:not(div.animate__animated) {
+div.border:not(div.animate__animated):not(div.lg\:p-6.p-4.border.rounded-xl.bg-\[\#57bd6a\]) {
   background: linear-gradient(
     150deg,
     #e8d8b9 0%,
