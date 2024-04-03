@@ -69,7 +69,7 @@ const WalineComponent = (props) => {
     oldest: '按倒序',
     latest: '按正序',
     hottest: '按热度',
-    reactionTitle: '你认为这篇文章怎么样？'
+    reactionTitle: '你认为这篇文章怎么样呀？'
   }
   useEffect(() => {
     if (!waline) {
@@ -82,12 +82,12 @@ const WalineComponent = (props) => {
         reaction: true,
         dark: 'html.dark',
         emoji: [
-          '//unpkg.com/@waline/emojis@1.1.0/qq',
-          '//unpkg.com/@waline/emojis@1.1.0/bmoji',
-          '//npm.elemecdn.com/@waline/emojis@1.1.0/bilibili',
-          '//npm.elemecdn.com/@waline/emojis@1.1.0/weibo',
-          '//npm.elemecdn.com/@waline/emojis@1.1.0/tieba',
-          '//unpkg.com/@waline/emojis@1.1.0/tw-food'
+          '//npm.elemecdn.com/@waline/emojis@1.2.0/qq',
+          '//unpkg.com/@waline/emojis@1.2.0/bmoji',
+          '//npm.elemecdn.com/@waline/emojis@1.2.0/bilibili',
+          '//npm.elemecdn.com/@waline/emojis@1.2.0/weibo',
+          '//npm.elemecdn.com/@waline/emojis@1.2.0/tieba',
+          '//unpkg.com/@waline/emojis@1.2.0/tw-food'
         ]
       })
     }
