@@ -82,11 +82,11 @@ const WalineComponent = (props) => {
         reaction: true,
         dark: 'html.dark',
         emoji: [
-          '//npm.elemecdn.com/@waline/emojis@1.2.0/weibo',
           '//unpkg.com/@waline/emojis@1.1.0/qq',
-          '//npm.elemecdn.com/@waline/emojis@1.2.0/bmoji',
-          '//npm.elemecdn.com/@waline/emojis@1.2.0/bilibili',
-          '//npm.elemecdn.com/@waline/emojis@1.2.0/tieba',
+          '//unpkg.com/@waline/emojis@1.1.0/bmoji',
+          '//npm.elemecdn.com/@waline/emojis@1.1.0/bilibili',
+          '//npm.elemecdn.com/@waline/emojis@1.1.0/weibo',
+          '//npm.elemecdn.com/@waline/emojis@1.1.0/tieba',
           '//unpkg.com/@waline/emojis@1.1.0/tw-food'
         ]
       })
@@ -126,6 +126,8 @@ const WalineComponent = (props) => {
       router.events.off('routeChangeComplete', updateWaline)
     }
   }, [])
+  
   return <div ref={containerRef} />
 }
+
 export default WalineComponent
