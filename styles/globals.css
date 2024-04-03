@@ -168,6 +168,29 @@ nav {
   @apply flex justify-center items-center;
 }
 
+/* ----- waline START -----*/
+
+.wl-header {
+  font-size: 1.1em !important;
+}
+
+.wl-header input {
+  font-size: 0.75em !important;
+}
+
+.wl-reaction-list {
+  padding-top: 12px !important;
+}
+
+#wl-edit {
+  background: url('https://c.kksk.ltd/sakurairo-vision/Sakurairo_Vision@2.6/basic/iloli.gif') 100% 100% no-repeat;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: right bottom !important;
+}
+
+/* ----- waline END -----*/
+
 /* Webmention style */
 .webmention-block {
   background: rgba(0, 116, 222, 0.2);
