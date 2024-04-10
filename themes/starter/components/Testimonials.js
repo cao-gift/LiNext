@@ -12,8 +12,8 @@ import { SVGRightArrow } from './svg/SVGRightArrow';
  * 一些外部js
  */
 const loadExternal = async () => {
-  await loadExternalResource('https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css', 'css');
-  await loadExternalResource('https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js', 'js');
+  await loadExternalResource('https://cdn.bootcdn.net/ajax/libs/Swiper/11.0.5/swiper-bundle.css', 'css');
+  await loadExternalResource('https://cdn.bootcdn.net/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js', 'js');
 
   const Swiper = window.Swiper
   if (!Swiper) {
