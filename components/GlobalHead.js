@@ -35,6 +35,7 @@ const GlobalHead = props => {
       {siteConfig('SEO_GOOGLE_SITE_VERIFICATION') && (
         <meta name='google-site-verification' content={siteConfig('SEO_GOOGLE_SITE_VERIFICATION')} />
       )}
+      <meta name="sogou_site_verification" content="q3X57CiIz8" />
       {siteConfig('SEO_BAIDU_SITE_VERIFICATION') && (
         <meta name='baidu-site-verification' content={siteConfig('SEO_BAIDU_SITE_VERIFICATION')} />
       )}
