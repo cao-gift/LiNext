@@ -23,7 +23,7 @@
   --notion-blue: rgb(30, 182, 255);
   --notion-purple: rgb(180, 104, 255);
   --notion-teal: rgb(75, 209, 139);
-  --notion-yellow: rgb(237, 175, 0)
+  --notion-yellow: rgb(237, 175, 0);
   --notion-orange: rgb(255, 153, 51);
   --notion-brown: rgb(177, 126, 99);
   --notion-gray: rgb(155, 154, 151);
@@ -68,8 +68,8 @@
 }
 
 .notion {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.6;
   color: var(--fg-color);
   caret-color: var(--fg-color);
   font-family: inherit !important;
