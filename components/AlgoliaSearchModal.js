@@ -70,7 +70,8 @@ export default function AlgoliaSearchModal({ cRef }) {
   // enter跳转
   useHotkeys('enter', (e) => {
     if (searchResults.length > 0) {
-      onJumpSearchResult(index)
+      e.preventDefault();  // 阻止默认行为，特别是在表单中输入时避免提交
+      onJumpSearchResult(activeIndex)
     }
   }, { enableOnFormTags: true })
 
