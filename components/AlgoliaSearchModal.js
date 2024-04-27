@@ -152,7 +152,7 @@ export default function AlgoliaSearchModal({ cRef }) {
   // 定义节流函数，确保在用户停止输入一段时间后才会调用处理搜索的方法
   const throttledHandleInputChange = useRef(throttle((query, page = 0) => {
     handleSearch(query, page);
-  }, 1000));
+  }, 800));
 
   // 用于存储搜索延迟的计时器
   const searchTimer = useRef(null);
@@ -169,7 +169,7 @@ export default function AlgoliaSearchModal({ cRef }) {
     // 设置新的计时器，在用户停止输入一段时间后触发搜索
     searchTimer.current = setTimeout(() => {
       throttledHandleInputChange.current(query);
-    }, 800);
+    }, 600);
   };
 
   /**
@@ -236,8 +236,10 @@ export default function AlgoliaSearchModal({ cRef }) {
         <ul className='flex-1 overflow-auto'>
           {searchResults.map((result, index) => (
             <li key={result.objectID}
-              onMouseEnter={() => setActiveIndex(index)}
-              onClick={() => onJumpSearchResult(index)}
+              onClick={() => {
+                setActiveIndex(index);
+                onJumpSearchResult(index);
+              }}
               className={`cursor-pointer replace my-2 p-2 duration-100 
               rounded-lg
               ${activeIndex === index ? 'bg-blue-600 dark:bg-yellow-600' : ''}`}>
