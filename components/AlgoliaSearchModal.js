@@ -234,12 +234,10 @@ export default function AlgoliaSearchModal({ cRef }) {
           )
         }
         <ul className='flex-1 overflow-auto'>
-          {searchResults.map((result, index) => (
+        {searchResults.map((result, index) => (
             <li key={result.objectID}
-              onClick={() => {
-                setActiveIndex(index);
-                onJumpSearchResult(index);
-              }}
+              onMouseEnter={() => setActiveIndex(index)}
+              onClick={useCallback(() => onJumpSearchResult(index), [index])}
               className={`cursor-pointer replace my-2 p-2 duration-100 
               rounded-lg
               ${activeIndex === index ? 'bg-blue-600 dark:bg-yellow-600' : ''}`}>
