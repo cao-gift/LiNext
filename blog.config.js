@@ -3,7 +3,7 @@ const BLOG = {
   // Important page_id！！！Duplicate Template from  https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5
   NOTION_PAGE_ID:
     process.env.NOTION_PAGE_ID ||
-    'b969304570d54d49b5ea42944cc824ef,en:7c1d570661754c8fbc568e00a01fd70e',
+    'b969304570d54d49b5ea42944cc824ef,en:',
   PSEUDO_STATIC: process.env.NEXT_PUBLIC_PSEUDO_STATIC || false, // 伪静态路径，开启后所有文章URL都以 .html 结尾。
   NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 604800, // 更新内容缓存间隔 单位(秒)；即每个页面有5秒的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使文章更新有延迟。
   THEME: process.env.NEXT_PUBLIC_THEME || 'heo', // 当前主题，在themes文件夹下可找到所有支持的主题；主题名称就是文件夹名，例如 example,fukasawa,gitbook,heo,hexo,landing,matery,medium,next,nobelium,plog,simple
@@ -58,23 +58,21 @@ const BLOG = {
   FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans',
   // 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
   FONT_URL: [
-    'https://npm.elemecdn.com/lxgw-wenkai-webfont/1.7.0/style.css',
+    'https://npm.elemecdn.com/lxgw-wenkai-webfont@1.7.0/style.css',
     'https://fonts.googleapis.com/css?family=Bitter&display=swap', // Bitter 用作英文数字的字体
     'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
     'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
   ],
   // 无衬线字体 例如'"LXGW WenKai"'
   FONT_SANS: [
-    '"LXGW WenKai"',
     '"PingFang SC"',
     '-apple-system',
     'BlinkMacSystemFont',
     '"Hiragino Sans GB"',
-    '"Microsoft YaHei"',
     '"Segoe UI Emoji"',
     '"Segoe UI Symbol"',
     '"Segoe UI"',
-    '"Noto Sans SC"',
+    '"LXGW WenKai"',
     'HarmonyOS_Regular',
     '"Helvetica Neue"',
     'Helvetica',
@@ -85,7 +83,7 @@ const BLOG = {
   ],
   // 衬线字体 例如'"LXGW WenKai"'
   FONT_SERIF: [
-    // '"LXGW WenKai"',
+    '"LXGW WenKai"',
     'Bitter',
     '"Noto Serif SC"',
     'SimSun',
