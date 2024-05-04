@@ -42,6 +42,7 @@ import { siteConfig } from '@/lib/config'
 import { isBrowser } from '@/lib/utils'
 import { loadWowJS } from '@/lib/plugins/wow'
 import BlogMemos from './components/BlogMemos'
+import AISummary from './components/AISummary'
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
@@ -380,6 +381,7 @@ const LayoutSlug = props => {
               {/* Notion文章主体 */}
               <section className="px-5 justify-center mx-auto">
                 <WWAds orientation="horizontal" className="w-full" />
+                {post && <AISummary post={post} />}
                 {post && <NotionPage post={post} />}
                 <WWAds orientation="horizontal" className="w-full" />
               </section>

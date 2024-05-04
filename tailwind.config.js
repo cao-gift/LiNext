@@ -51,6 +51,12 @@ module.exports = {
           7: '#D1D5DB',
           8: '#E5E7EB'
         },
+        ai:{
+          'bg':'var(--ai-bg)',
+          'title':'var(--ai-title)',
+          'title-text':'var(--ai-title-text)',
+          'card-bg':'var(--ai-card-bg)'
+        },
         primary: '#3758F9',
         'blue-dark': '#1B44C8',
         secondary: '#13C296',
@@ -68,6 +74,12 @@ module.exports = {
       maxWidth: {
         side: '14rem',
         '9/10': '90%'
+      },
+      borderWidth: {
+        'ai-card': '1px',
+      },
+      borderColor: {
+        'ai-card': 'var(--ai-card-border)',
       },
       boxShadow: {
         input: '0px 7px 20px rgba(0, 0, 0, 0.03)',
