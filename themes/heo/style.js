@@ -18,7 +18,7 @@ const Style = () => {
       --ai-bg: #21232a;
       --ai-title: #f2b94b;
       --ai-title-text: #1b1c20;
-      --ai-card-bg: #FFFFF0;
+      --ai-card-bg: #1d1e22;
       --ai-card-border: #3d3d3f;
   }
       body {
