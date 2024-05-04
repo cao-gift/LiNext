@@ -70,7 +70,6 @@ div.border:not(div.animate__animated):not(div.lg\:p-6.p-4.border.rounded-xl.bg-\
   );
   background-size: 400% 400%;
   animation: Gradient 16s ease infinite;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
 @keyframes Gradient {
   0% {
@@ -254,4 +253,9 @@ input.text-black:hover,
 input.text-black:focus {
 border: 2px solid #4A9DEC;
 box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+}
+
+/* 设置{文章摘要}字体大小 */
+.font-bold.ml-2 {
+  font-size: 18px;
 }
