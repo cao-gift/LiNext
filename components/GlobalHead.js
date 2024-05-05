@@ -39,7 +39,7 @@ const GlobalHead = props => {
   useEffect(() => {
     // 使用WebFontLoader字体加载
     loadExternalResource(
-      'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js',
+      'https://jsd.cdn.zzko.cn/npm/webfontloader@1.6.28/webfontloader.min.js',
       'js'
     ).then(url => {
       const WebFont = window?.WebFont
