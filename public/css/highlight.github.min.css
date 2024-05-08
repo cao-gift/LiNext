@@ -11,7 +11,7 @@ body.light-theme,
   --color-hljs-comment: #6a737d;
   --color-hljs-quote: #22863a;
   --color-hljs-subst: #24292e;
-  --color-hljs-section: #005cc5;
+  --color-hljs-section: #49c6ec;
   --color-hljs-bullet: #735c0f;
   --color-hljs-emphasis: #24292e;
   --color-hljs-strong: #24292e;
@@ -43,19 +43,19 @@ body.light-theme,
   --color-hljs-deletion-bg: #78191b;
 }
 
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
   body:not(.dark-theme) {
     --color-hljs-hljs: #24292e;
     --color-hljs-hljs-bg: #fff;
     --color-hljs-tag: #d73a49;
     --color-hljs-title: #6f42c1;
-    --color-hljs-attr: #005cc5;
+    --color-hljs-attr: #49c6ec;
     --color-hljs-meta: #032f62;
     --color-hljs-symbol: #e36209;
     --color-hljs-comment: #6a737d;
     --color-hljs-quote: #22863a;
     --color-hljs-subst: #24292e;
-    --color-hljs-section: #005cc5;
+    --color-hljs-section: #49c6ec;
     --color-hljs-bullet: #735c0f;
     --color-hljs-emphasis: #24292e;
     --color-hljs-strong: #24292e;
@@ -87,7 +87,7 @@ body.light-theme,
     --color-hljs-deletion: #ffd8d3;
     --color-hljs-deletion-bg: #78191b;
   }
-} */
+}
 
 pre code.hljs {
   display: block;
@@ -99,16 +99,6 @@ code.hljs {
   padding: 3px 5px
 }
 
-/*!
-  Theme: GitHub
-  Description: Light theme as seen on github.com
-  Author: github.com
-  Maintainer: @Hirse
-  Updated: 2021-05-15
-
-  Outdated base version: https://github.com/primer/github-syntax-light
-  Current colors taken from GitHub's CSS
-*/
 .hljs {
   color: var(--color-hljs-hljs);
   background: var(--color-hljs-hljs-bg)

@@ -9,11 +9,11 @@ const BlogMemos = () => {
         Promise.all([
             loadExternalResource('/css/memos.css', 'css'),
             loadExternalResource('/css/highlight.github.min.css', 'css'),
-            loadExternalResource('/js/lazyload.min.js?v=17.8.3', 'js'),
-            loadExternalResource('/js/marked.min.js?v=11.1.1', 'js'),
-            loadExternalResource('/js/view-image.min.js?v=2.0.2', 'js'),
-            loadExternalResource('/js/highlight.min.js?v=11.9.0', 'js'),
-            loadExternalResource('/js/moment.min.js?v=2.30.1', 'js'),
+            loadExternalResource('/js/lazyload.min.js', 'js'),
+            loadExternalResource('/js/marked.min.js', 'js'),
+            loadExternalResource('/js/view-image.min.js', 'js'),
+            loadExternalResource('/js/highlight.min.js', 'js'),
+            loadExternalResource('/js/moment.min.js', 'js'),
         ])
         .then(() => {
             // 保证moment.js加载完成后再加载moment.twitter.js

@@ -14,7 +14,7 @@ body.light-theme,
     --color-border-default: #f27474;  /* 更改为默认边框色 */
     --color-border-muted: #e4d8d8; /* 淡化边框颜色，用于不太明显的边框 */
     --color-post-preview: #fff; /* 文章预览背景色 */
-    --color-memos-pre-bg: #DABFFF; /* 备忘录预览背景色 */
+    --color-memos-pre-bg: #FAF9DE; /* 备忘录预览背景色 */
 }
 
 /* 定义深色主题的颜色变量 */
