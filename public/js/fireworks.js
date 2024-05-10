@@ -11,22 +11,22 @@ function createFireworks({ config, anime }) {
 
   const defaultConfig = {
     colors: config?.colors,
-    numberOfParticules: 20,
+    numberOfParticules: 30,
     orbitRadius: {
-      min: 50,
-      max: 100
+      min: 80,
+      max: 160
     },
     circleRadius: {
-      min: 10,
-      max: 20
+      min: 15,
+      max: 30
     },
     diffuseRadius: {
-      min: 50,
-      max: 100
+      min: 80,
+      max: 160
     },
     animeDuration: {
-      min: 900,
-      max: 1500
+      min: 1000,
+      max: 1800
     }
   }
   config = Object.assign(defaultConfig, config)
@@ -108,7 +108,7 @@ function createFireworks({ config, anime }) {
     const p = {
       x,
       y,
-      color: '#000',
+      color: '#FFF',
       radius: 0.1,
       alpha: 0.5,
       lineWidth: 6,
