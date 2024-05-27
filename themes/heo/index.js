@@ -293,7 +293,6 @@ const LayoutMemos = props => {
                   </div>
                   <Comment frontMatter={post} className='' />
                 </div>
-              </div>
             )}
           </div>
         )}
