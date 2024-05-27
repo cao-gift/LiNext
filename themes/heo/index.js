@@ -284,6 +284,11 @@ const LayoutMemos = props => {
                 <WWAds orientation="horizontal" className="w-full" />
               </section>
             </article>
+
+            {fullWidth ? null : (
+              <div className={`${commentEnable && post ? '' : 'hidden'}`}>
+                <hr className='my-4 border-dashed' />
+
                 {/* 评论互动 */}
                 <div className='duration-200 overflow-x-auto px-5'>
                   <div className='text-2xl dark:text-white'>
@@ -292,11 +297,12 @@ const LayoutMemos = props => {
                   </div>
                   <Comment frontMatter={post} className='' />
                 </div>
+              </div>
+            )}
           </div>
         )}
-      </div>
       <FloatTocButton {...props} />
-    </>
+  </>
   )
 }
 
