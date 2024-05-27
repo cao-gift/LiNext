@@ -250,9 +250,9 @@ const LayoutMemos = props => {
   const [hasCode, setHasCode] = useState(false)
 
   useEffect(() => {
-    const hasCode = document.querySelectorAll('[class^="language-"]').length > 0
-    setHasCode(hasCode)
-  }, [])
+    const codeElements = document.querySelectorAll('[class^="language-"]')
+    setHasCode(codeElements.length > 0)
+  }, [fullWidth])
 
   const commentEnable = siteConfig('COMMENT_WALINE_SERVER_URL')
 
@@ -288,10 +288,6 @@ const LayoutMemos = props => {
             {fullWidth ? null : (
               <div className={`${commentEnable && post ? '' : 'hidden'}`}>
                 <hr className='my-4 border-dashed' />
-                {/* 评论区上方广告 */}
-                <div className='py-2'>
-                  <AdSlot />
-                </div>
                 {/* 评论互动 */}
                 <div className='duration-200 overflow-x-auto px-5'>
                   <div className='text-2xl dark:text-white'>
