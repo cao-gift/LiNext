@@ -274,10 +274,9 @@ const LayoutMemos = props => {
             className='overflow-x-auto flex-grow mx-auto md:w-full md:px-5 '>
             <article
               itemScope
-              itemType="https://schema.org/Movie"
-              data-wow-delay=".2s"
-              className="wow fadeInUp subpixel-antialiased overflow-y-hidden"
-            >
+              itemType='https://schema.org/Movie'
+              data-wow-delay='.2s'
+              className='wow fadeInUp subpixel-antialiased overflow-y-hidden'>
               {/* Notion文章主体 */}
               <section className='px-5 justify-center mx-auto'>
                 <WWAds orientation="horizontal" className="w-full" />
