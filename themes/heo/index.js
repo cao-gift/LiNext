@@ -264,14 +264,14 @@ const LayoutMemos = props => {
 
   return (
     <>
-      <div className={`w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600 article`}>
-        {lock && <ArticleLock validPassword={validPassword} />}
+      <div
+        className={`w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600 article`}>
+        {lock && <PostLock validPassword={validPassword} />}
 
         {!lock && (
           <div
-            id="article-wrapper"
-            className="overflow-x-auto flex-grow mx-auto md:w-full md:px-5 "
-          >
+            id='article-wrapper'
+            className='overflow-x-auto flex-grow mx-auto md:w-full md:px-5 '>
             <article
               itemScope
               itemType="https://schema.org/Movie"
@@ -293,7 +293,6 @@ const LayoutMemos = props => {
                   </div>
                   <Comment frontMatter={post} className='' />
                 </div>
-            )}
           </div>
         )}
       </div>
