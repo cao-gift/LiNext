@@ -244,7 +244,6 @@ const LayoutArchive = props => {
  * @returns
  */
 const LayoutMemos = props => {
-const LayoutMemos = props => {
   const { lock, validPassword } = props
   const { locale, fullWidth } = useGlobal()
   
