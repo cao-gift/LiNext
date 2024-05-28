@@ -58,7 +58,7 @@ const LayoutBase = props => {
   const router = useRouter()
 
   const headerSlot = (
-    <header className='shadow'>
+    <header>
       {/* 顶部导航 */}
       <Header {...props} />
 
