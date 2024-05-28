@@ -250,88 +250,59 @@ const LayoutMemos = props => {
   const [hasCode, setHasCode] = useState(false)
 
   useEffect(() => {
-    const hasCode = document.querySelectorAll('[class^="language-"]').length > 0
-    setHasCode(hasCode)
-  }, [])
+    const codeElements = document.querySelectorAll('[class^="language-"]')
+    setHasCode(codeElements.length > 0)
+  }, [fullWidth])
+  
+  const commentEnable = siteConfig('COMMENT_WALINE_SERVER_URL')
+  
+  const memoPageInfo = {
+    id: "2ab7483d3d42419ebf6dfa90b229103c", 
+    type: "memos",
+    title: "我的说说",
+  };
 
-  const commentEnable = siteConfig('COMMENT_TWIKOO_ENV_ID') || siteConfig('COMMENT_WALINE_SERVER_URL') || siteConfig('COMMENT_VALINE_APP_ID') ||
-    siteConfig('COMMENT_GISCUS_REPO') || siteConfig('COMMENT_CUSDIS_APP_ID') || siteConfig('COMMENT_UTTERRANCES_REPO') ||
-    siteConfig('COMMENT_GITALK_CLIENT_ID') || siteConfig('COMMENT_WEBMENTION_ENABLE')
-
-  const router = useRouter()
-  useEffect(() => {
-    // 404
-    if (!post) {
-      setTimeout(
-        () => {
-          if (isBrowser) {
-            const article = document.getElementById('notion-article')
-            if (!article) {
-              router.push('/404').then(() => {
-                console.warn('找不到页面', router.asPath)
-              })
-            }
-          }
-        },
-        siteConfig('POST_WAITING_TIME_FOR_404') * 1000
-      )
-    }
-  }, [post])
   return (
     <>
-      <div
-        className={`w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600 article`}>
-        {lock && <PostLock validPassword={validPassword} />}
+      <div className={`w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600 article`}>
+        {lock && <ArticleLock validPassword={validPassword} />}
 
         {!lock && (
           <div
-            id='article-wrapper'
-            className='overflow-x-auto flex-grow mx-auto md:w-full md:px-5 '>
+            id="article-wrapper"
+            className="overflow-x-auto flex-grow mx-auto md:w-full md:px-5 "
+          >
             <article
               itemScope
-              itemType='https://schema.org/Movie'
-              data-wow-delay='.2s'
-              className='wow fadeInUp subpixel-antialiased overflow-y-hidden'>
+              itemType="https://schema.org/Movie"
+              data-wow-delay=".2s"
+              className="wow fadeInUp subpixel-antialiased overflow-y-hidden"
+            >
               {/* Notion文章主体 */}
-              <section className='px-5 justify-center mx-auto'>
-                <WWAds orientation='horizontal' className='w-full' />
-                {post && <AISummary post={post} />}
-                {post && <NotionPage post={post} />}
-                <WWAds orientation='horizontal' className='w-full' />
+              <section className="px-5 justify-center mx-auto">
+                <WWAds orientation="horizontal" className="w-full" />
+                <BlogMemos {...props}/>
+                <WWAds orientation="horizontal" className="w-full" />
               </section>
-
-              {/* 分享 */}
-              <ShareBar post={post} />
-              {post?.type === 'Post' && (
-                <div className="px-5">
-                  {/* 版权 */}
-                  <PostCopyright {...props} />
-                  {/* 文章推荐 */}
-                  <PostRecommend {...props} />
-                  {/* 上一篇\下一篇文章 */}
-                  <PostAdjacent {...props} />
-                </div>
-              )}
             </article>
 
             {fullWidth
               ? null
-              : <div className={`${commentEnable && post ? '' : 'hidden'}`}>
+              : <div className={`${commentEnable && memoPageInfo ? '' : 'hidden'}`}>
                 <hr className="my-4 border-dashed" />
                 {/* 评论区上方广告 */}
-                <div className='py-2'>
-                  <AdSlot />
+                <div className="py-2">
+                    <AdSlot />
                 </div>
                 {/* 评论互动 */}
-                <div className='duration-200 overflow-x-auto px-5'>
-                  <div className='text-2xl dark:text-white'>
-                    <i className='fas fa-comment mr-1' />
+                <div className="duration-200 overflow-x-auto px-5">
+                  <div className="text-2xl dark:text-white">
+                    <i className="fas fa-comment mr-1" />
                     {locale.COMMON.COMMENTS}
                   </div>
-                  <Comment frontMatter={post} className="" />
+                  <Comment frontMatter={memoPageInfo} />
                 </div>
-              </div>
-            )}
+              </div>}
           </div>
         )}
       </div>
@@ -339,6 +310,7 @@ const LayoutMemos = props => {
     </>
   )
 }
+
 /**
  * 文章详情
  * @param {*} props
@@ -400,8 +372,9 @@ const LayoutSlug = props => {
               data-wow-delay='.2s'
               className='wow fadeInUp subpixel-antialiased overflow-y-hidden'>
               {/* Notion文章主体 */}
-              <section className="px-5 justify-center mx-auto">
-                <WWAds orientation="horizontal" className="w-full" />
+              <section className='px-5 justify-center mx-auto'>
+                <WWAds orientation='horizontal' className='w-full' />
+                {post && <AISummary post={post} />}
                 {post && <NotionPage post={post} />}
                 <WWAds orientation='horizontal' className='w-full' />
               </section>
@@ -591,12 +564,12 @@ const LayoutTagIndex = props => {
 export {
   Layout404,
   LayoutArchive,
+  LayoutMemos, //增加LayoutMemos组件Export
   LayoutBase,
   LayoutCategoryIndex,
   LayoutIndex,
   LayoutPostList,
   LayoutSearch,
-  LayoutMemos,   //增加LayoutMemos组件Export
   LayoutSlug,
   LayoutTagIndex,
   CONFIG as THEME_CONFIG
