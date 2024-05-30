@@ -1527,6 +1527,7 @@ div[class*="notion-property-checkbox-checked"] svg {
 
 .notion-collection-card-property .notion-page-title-text {
   border-bottom: 0 none;
+  @apply dark:text-gray-200;
 }
 
 .notion-collection-card-property
