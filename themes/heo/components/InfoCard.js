@@ -46,7 +46,7 @@ export function InfoCard(props) {
         <div className='flex space-x-3  hover:text-black dark:hover:text-white'>
           {/* 两个社交按钮 */}
           <div className='bg-indigo-400 p-2 rounded-full  transition-colors duration-200 dark:bg-yellow-500 dark:hover:bg-black hover:bg-white'>
-            <Link href='https://88lin.github.io/'>
+            <Link href='https://xydh.fun/hyjsdh'>
               <GlobeAlt className={'w-6 h-6'} />
             </Link>
           </div>
@@ -91,7 +91,7 @@ function GreetingsWords() {
  */
 function MoreButton() {
   return (
-    <Link href='https://88lin.eu.org/about'>
+    <Link href='https://blog.freeblock.cn/about'>
       <div
         className={
           'group bg-indigo-400 dark:bg-yellow-500 hover:bg-white dark:hover:bg-black hover:text-black dark:hover:text-white flex items-center transition-colors duration-200 py-2 px-3 rounded-full space-x-1'
