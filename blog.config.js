@@ -337,13 +337,13 @@ const BLOG = {
     process.env.NEXT_PUBLIC_COMMENT_HIDE_SINGLE_TAB || false, // Whether hide the tab when there's no tabs. 只有一个评论组件时是否隐藏切换组件的标签页
 
   // artalk 评论插件
-  COMMENT_ARTALK_SERVER: process.env.NEXT_PUBLIC_COMMENT_ARTALK_SERVER || 'https://artalk-mb82.onrender.com', // ArtalkServert后端地址 https://artalk.js.org/guide/deploy.html
+  COMMENT_ARTALK_SERVER: process.env.NEXT_PUBLIC_COMMENT_ARTALK_SERVER || '', // ArtalkServert后端地址 https://artalk.js.org/guide/deploy.html
   COMMENT_ARTALK_JS:
     process.env.NEXT_PUBLIC_COMMENT_ARTALK_JS ||
-    'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/artalk/2.5.5/Artalk.js', // ArtalkServert js cdn
+    'https://cdnjs.cloudflare.com/ajax/libs/artalk/2.5.5/Artalk.js', // ArtalkServert js cdn
   COMMENT_ARTALK_CSS:
     process.env.NEXT_PUBLIC_COMMENT_ARTALK_CSS ||
-    'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/artalk/2.5.5/Artalk.css', // ArtalkServert css cdn
+    'https://cdnjs.cloudflare.com/ajax/libs/artalk/2.5.5/Artalk.css', // ArtalkServert css cdn
 
   // twikoo
   COMMENT_TWIKOO_ENV_ID: process.env.NEXT_PUBLIC_COMMENT_ENV_ID || '', // TWIKOO后端地址 腾讯云环境填envId；Vercel环境填域名，教程：https://tangly1024.com/article/notionnext-twikoo
@@ -393,10 +393,10 @@ const BLOG = {
   COMMENT_GITALK_DISTRACTION_FREE_MODE: false, // 类似facebook的无干扰模式
   COMMENT_GITALK_JS_CDN_URL:
     process.env.NEXT_PUBLIC_COMMENT_GITALK_JS_CDN_URL ||
-    'https://cdnjs.cloudflare.com/ajax/libs/artalk/2.5.5/Artalk.js', // gitalk客户端 js cdn
+    'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', // gitalk客户端 js cdn
   COMMENT_GITALK_CSS_CDN_URL:
     process.env.NEXT_PUBLIC_COMMENT_GITALK_CSS_CDN_URL ||
-    'https://cdnjs.cloudflare.com/ajax/libs/artalk/2.5.5/Artalk.css', // gitalk客户端 css cdn
+    'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css', // gitalk客户端 css cdn
 
   COMMENT_GITTER_ROOM: process.env.NEXT_PUBLIC_COMMENT_GITTER_ROOM || '', // gitter聊天室 see https://gitter.im/ 不需要则留空
   COMMENT_DAO_VOICE_ID: process.env.NEXT_PUBLIC_COMMENT_DAO_VOICE_ID || '', // DaoVoice http://dashboard.daovoice.io/get-started
