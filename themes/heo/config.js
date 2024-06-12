@@ -1,11 +1,12 @@
 const CONFIG = {
   HEO_HOME_BANNER_ENABLE: true,
 
-  HEO_SITE_CREATE_TIME: '2020-09-21', // 建站日期，用于计算网站运行的第几天
+  HEO_SITE_CREATE_TIME: '2021-09-21', // 建站日期，用于计算网站运行的第几天
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到CJW博客', url: 'https://blog.freeblock.cn' }
+    { title: '欢迎来到故人博客', url: 'https://blog.freeblock.cn' },
+    { title: '清风徐来，水波不兴', url: 'https://blog.freeblock.cn' }
   ],
 
   // 英雄区左右侧组件颠倒位置
@@ -103,7 +104,7 @@ const CONFIG = {
     }
   ],
 
-  HEO_SOCIAL_CARD: fetch, // 是否显示右侧，点击加入社群按钮
+  HEO_SOCIAL_CARD: false, // 是否显示右侧，点击加入社群按钮
   HEO_SOCIAL_CARD_TITLE_1: '公众号',
   HEO_SOCIAL_CARD_TITLE_2: '快人一步获取最新文章',
   HEO_SOCIAL_CARD_TITLE_3: '点击扫码关注公众号',
