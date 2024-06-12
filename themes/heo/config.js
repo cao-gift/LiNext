@@ -5,7 +5,7 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到故人博客', url: 'https://blog.freeblock.cn' },
+    { title: '欢迎来到CJW博客', url: 'https://blog.freeblock.cn' },
     { title: '清风徐来，水波不兴', url: 'https://blog.freeblock.cn' }
   ],
 
