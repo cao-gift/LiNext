@@ -6,7 +6,8 @@ const CONFIG = {
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
     { title: '欢迎来到故人博客', url: 'https://88lin.eu.org' },
-    { title: '点击使用ChatGPT', url: 'https://88lin.eu.org/article/34' }
+    { title: '点击使用ChatGPT', url: 'https://88lin.eu.org/article/34' },
+    { title: '请使用Ctrl+左键单击 / 鼠标中键等方式访问链接，提升效率', url: '' }
   ],
 
   // 英雄区左右侧组件颠倒位置
