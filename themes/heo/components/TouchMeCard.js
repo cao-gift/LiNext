@@ -20,7 +20,7 @@ export default function TouchMeCard() {
                     <div className='h-full'>
                         <h2 className='font-[1000] text-3xl'>{siteConfig('HEO_SOCIAL_CARD_TITLE_1', null, CONFIG)}</h2>
                         <h3 className='pt-2'>{siteConfig('HEO_SOCIAL_CARD_TITLE_2', null, CONFIG)}</h3>
-                        <div className='absolute left-0 top-0 w-full h-full' style={{ background: 'url(https://www.jsdelivr.ren/gh/88lin/PicX@master/gzh_cover.png) center center no-repeat' }}></div>
+                        <div className='absolute left-0 top-0 w-full h-full' style={{ background: 'url(https://cdn.jsdmirror.com/gh/88lin/PicX@master/gzh_cover.png) center center no-repeat' }}></div>
                     </div>}
                 backContent={<Link href={siteConfig('HEO_SOCIAL_CARD_URL', null, CONFIG)}>
                     <div className='font-[1000] text-xl h-full'>
